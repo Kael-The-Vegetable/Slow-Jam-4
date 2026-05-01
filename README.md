@@ -1,7 +1,7 @@
 # Slow-Jam-4
 GitHub for newest Slow Jam
 
-(Theme is revealed wnen the jam starts.)
+(Theme is revealed when the jam starts.)
 
 https://itch.io/jam/alberta-slow-jam-4
 
