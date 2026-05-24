@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.kael-the-vegetable.basic_utilities": {
+      "version": "https://github.com/Kael-The-Vegetable/BasicUtilities.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b56b79805e8594c9f4ab9948e6e0a30d9fec1083"
+    },
     "com.unity.2d.animation": {
       "version": "14.0.3",
       "depth": 0,
