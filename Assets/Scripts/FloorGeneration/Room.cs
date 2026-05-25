@@ -16,6 +16,10 @@ public class Room : MonoBehaviour
 		a.position = position;
 		Area = a;
 	}
+	public Entrance[] GetEntrancesForDirection(Direction direction)
+	{
+		return Array.FindAll(Entrances, e => (int)e.Direction + (int)direction == 0);
+	}
 	public Entrance[] GetFreeEntrances()
 	{
 		return Array.FindAll(Entrances, e => !e.InUse);

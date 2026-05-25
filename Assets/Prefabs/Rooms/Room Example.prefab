@@ -147,12 +147,16 @@ MonoBehaviour:
   <Entrances>k__BackingField:
   - <x>k__BackingField: -1
     <y>k__BackingField: 0
+    <Direction>k__BackingField: 2
   - <x>k__BackingField: 3
     <y>k__BackingField: 0
+    <Direction>k__BackingField: 3
   - <x>k__BackingField: 2
     <y>k__BackingField: 1
+    <Direction>k__BackingField: 0
   - <x>k__BackingField: 0
     <y>k__BackingField: -1
+    <Direction>k__BackingField: 1
   <Type>k__BackingField: 1
 --- !u!1 &5850850822413850540
 GameObject:

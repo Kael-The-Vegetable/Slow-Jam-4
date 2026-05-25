@@ -1,13 +1,11 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class FloorGenerator : MonoBehaviour
 {
 	[SerializeField] private Grid _grid;
 	[SerializeField] private RectInt _floorSize;
-	[SerializeField] private Vector2Int _entranceToFloor;
+	[SerializeField] private Entrance _entranceToFloor;
 	[SerializeField] private FloorConstructionLibrary _library;
 	private List<Room> _rooms = new();
 	private void Awake()
@@ -37,26 +35,33 @@ public class FloorGenerator : MonoBehaviour
 	{
 		Queue<Entrance> entrancesToExpand = new();
 		foreach (Entrance entrance in startingPoint.GetFreeEntrances()) entrancesToExpand.Enqueue(entrance);
-
-		while (entrancesToExpand.Count > 0)
+		int count = 0;
+		while (entrancesToExpand.Count > 0 && count < 100)
 		{
+			count++;
 			Entrance entrance = entrancesToExpand.Dequeue();
-			RectInt validArea = new RectInt(_floorSize.position, _floorSize.size);
-			Room room = _library.GetRoomForSpace(validArea, entrance, Room.RoomType.Normal);
+			RectInt vArea = GetValidArea(entrance);
+			Room room = _library.GetRoomForSpace(vArea, entrance, Room.RoomType.Normal);
 
 			if (room == null) continue;
-			if (!PlaceRoom(room, entrance, _floorSize)) continue;
+			Debug.Log("Placing room " + room.name + " at entrance (" + entrance.x + ", " + entrance.y + ") with valid area " + vArea);
+			if (!PlaceRoom(room, entrance, vArea)) continue;
 
 			Entrance[] newEntrances = room.GetFreeEntrances();
 			for (int i = 0; i < newEntrances.Length; i++) entrancesToExpand.Enqueue(newEntrances[i]);
 		}
+		if (count >= 100) Debug.LogError("Reached maximum number of iterations while generating " + name);
+	}
+	private RectInt GetValidArea(Entrance entrance)
+	{
+		return _floorSize.LargestFixedPointArea(entrance, _rooms.ConvertAll(r => r.Area).ToArray());
 	}
 	private bool PlaceRoom(Room room, Entrance entrance, RectInt validArea)
 	{
 		bool canPlace = false;
 		int entranceIndex;
 		for (entranceIndex = 0; !canPlace && entranceIndex < room.Entrances.Length; entranceIndex++)
-		{ canPlace = validArea.Enveloping(new RectInt(room.Area.position - room.Entrances[entranceIndex], room.Area.size)); }
+		{ canPlace = validArea.Enveloping(new RectInt(entrance + room.Area.position - room.Entrances[entranceIndex], room.Area.size)); }
 		if (!canPlace) return false;
 
 		Vector2Int origin = entrance - room.Entrances[--entranceIndex];
@@ -80,6 +85,6 @@ public class FloorGenerator : MonoBehaviour
 		Gizmos.DrawCube(worldSize.center, worldSize.size);
 
 		Gizmos.color = Color.red;
-		Gizmos.DrawSphere(_grid.CellToWorld((Vector3Int)_entranceToFloor) + _grid.cellSize * 0.5f, 0.5f);
+		Gizmos.DrawSphere(_grid.CellToWorld(_entranceToFloor) + _grid.cellSize * 0.5f, 0.5f);
 	}
 }
