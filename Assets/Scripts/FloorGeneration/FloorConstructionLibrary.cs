@@ -22,13 +22,13 @@ public class FloorConstructionLibrary : ScriptableObject
 		if (entrance == default)
 		{
 			return Array.FindAll(RoomTemplates, 
-				r => r.Size.x <= area.width && r.Size.y <= area.height 
+				r => r.Area.size.x <= area.width && r.Area.size.y <= area.height
 				&& r.Type == type);
 		}
 		else
 		{
 			return Array.FindAll(RoomTemplates, 
-				r => r.Size.x <= area.width && r.Size.y <= area.height 
+				r => r.Area.size.x <= area.width && r.Area.size.y <= area.height 
 				&& r.Type == type
 				&& Array.Exists(r.Entrances, e => e == entrance));
 		}

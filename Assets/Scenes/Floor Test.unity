@@ -403,7 +403,7 @@ MonoBehaviour:
     y: 0
     width: 20
     height: 6
-  _startingRoom: {x: 0, y: 0}
+  _entranceToFloor: {x: -1, y: 0}
   _library: {fileID: 11400000, guid: ceb9e07a41dde9d40800f66b98c2c3d8, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
