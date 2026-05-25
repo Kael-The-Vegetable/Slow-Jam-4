@@ -19,7 +19,7 @@ public class FloorGenerator : MonoBehaviour
 			return;
 		}
 
-		Room s = _library.GetStarterRoom();
+		Room s = _library.GetStarterRoom(_floorSize, _entranceToFloor);
 		if (s == null)
 		{
 			Debug.LogError("No starter room found in " + _library.name);
@@ -35,6 +35,21 @@ public class FloorGenerator : MonoBehaviour
 	}
 	private void Generate(Room startingPoint)
 	{
+		Queue<Entrance> entrancesToExpand = new();
+		foreach (Entrance entrance in startingPoint.GetFreeEntrances()) entrancesToExpand.Enqueue(entrance);
+
+		while (entrancesToExpand.Count > 0)
+		{
+			Entrance entrance = entrancesToExpand.Dequeue();
+			RectInt validArea = new RectInt(_floorSize.position, _floorSize.size);
+			Room room = _library.GetRoomForSpace(validArea, entrance, Room.RoomType.Normal);
+
+			if (room == null) continue;
+			if (!PlaceRoom(room, entrance, _floorSize)) continue;
+
+			Entrance[] newEntrances = room.GetFreeEntrances();
+			for (int i = 0; i < newEntrances.Length; i++) entrancesToExpand.Enqueue(newEntrances[i]);
+		}
 	}
 	private bool PlaceRoom(Room room, Entrance entrance, RectInt validArea)
 	{
@@ -52,6 +67,8 @@ public class FloorGenerator : MonoBehaviour
 
 		_rooms.Add(newRoom);
 		newRoom.Initialize(_grid.cellSize, origin);
+		entrance.InUse = true;
+		newRoom.Entrances[entranceIndex].InUse = true;
 		return true;
 	}
 	private void OnDrawGizmos()

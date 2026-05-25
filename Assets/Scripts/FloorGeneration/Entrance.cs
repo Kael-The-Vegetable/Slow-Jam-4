@@ -15,6 +15,8 @@ public struct Entrance
 	}
 
     public static Entrance operator +(Entrance a, Entrance b) => new(a.x + b.x, a.y + b.y);
+    public static Vector2Int operator +(Vector2Int a, Entrance b) => new(a.x + b.x, a.y + b.y);
+    public static Vector2Int operator +(Entrance a, Vector2Int b) => new(a.x + b.x, a.y + b.y);
 	public static Entrance operator -(Entrance a, Entrance b) => new(a.x - b.x, a.y - b.y);
     public static Entrance operator -(Entrance a) => new Entrance(-a.x, -a.y);
     public static Vector2Int operator -(Vector2Int a, Entrance b) => new(a.x - b.x, a.y - b.y);
@@ -45,14 +47,14 @@ public struct Entrance
         return new Entrance(vector.x, vector.y);
     }
 
-	public override bool Equals(object obj)
+	public override readonly bool Equals(object obj)
 	{
 		return obj is Entrance entrance &&
 			   x == entrance.x &&
 			   y == entrance.y &&
 			   InUse == entrance.InUse;
 	}
-	public override int GetHashCode()
+	public override readonly int GetHashCode()
 	{
 		return HashCode.Combine(x, y, InUse);
 	}

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 public class Room : MonoBehaviour
 {
 	[field:SerializeField] public RectInt Area { get; private set; }
@@ -15,6 +15,10 @@ public class Room : MonoBehaviour
 		var a = Area;
 		a.position = position;
 		Area = a;
+	}
+	public Entrance[] GetFreeEntrances()
+	{
+		return Array.FindAll(Entrances, e => !e.InUse);
 	}
 	private void OnDrawGizmosSelected()
 	{
