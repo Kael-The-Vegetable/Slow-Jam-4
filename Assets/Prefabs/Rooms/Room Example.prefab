@@ -145,10 +145,14 @@ MonoBehaviour:
     height: 1
   _personalScalar: 4
   <Entrances>k__BackingField:
-  - {x: -1, y: 0}
-  - {x: 3, y: 0}
-  - {x: 2, y: 1}
-  - {x: 0, y: -1}
+  - <x>k__BackingField: -1
+    <y>k__BackingField: 0
+  - <x>k__BackingField: 3
+    <y>k__BackingField: 0
+  - <x>k__BackingField: 2
+    <y>k__BackingField: 1
+  - <x>k__BackingField: 0
+    <y>k__BackingField: -1
   <Type>k__BackingField: 1
 --- !u!1 &5850850822413850540
 GameObject:

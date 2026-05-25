@@ -35,9 +35,8 @@ public class FloorGenerator : MonoBehaviour
 	}
 	private void Generate(Room startingPoint)
 	{
-
 	}
-	private bool PlaceRoom(Room room, Vector2Int entrance, RectInt validArea)
+	private bool PlaceRoom(Room room, Entrance entrance, RectInt validArea)
 	{
 		bool canPlace = false;
 		int entranceIndex;

@@ -4,7 +4,7 @@ public class Room : MonoBehaviour
 {
 	[field:SerializeField] public RectInt Area { get; private set; }
 	[SerializeField] private float _personalScalar = 1f;
-	[field:SerializeField] public Vector2Int[] Entrances { get; private set; } = new Vector2Int[0];
+	[field:SerializeField] public Entrance[] Entrances { get; private set; } = new Entrance[0];
 
 	public enum RoomType { Starting, Normal, Boss, Treasure }
 	[field:SerializeField] public RoomType Type { get; private set; } = RoomType.Normal;
