@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 1.2470063e-19
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 882603289
+  m_SpriteHash: 194125447
 --- !u!114 &260758400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,8 +232,8 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
-  m_Color: {r: 0.827451, g: 0.827451, b: 0.827451, a: 1}
+  m_Sprite: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
+  m_Color: {r: 0.78113204, g: 0.78113204, b: 0.78113204, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -288,10 +288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 7.259404e-11
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 398979458
+  m_SpriteHash: 555862233
 --- !u!114 &412700257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5154384196524603654, guid: 1446b0fe8a83a9a46bd2412eb3e2017f, type: 3}
+  m_Sprite: {fileID: -4698600402995417950, guid: bbdb0048d3824594287df9f7aee23853, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -395,6 +395,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1799406150}
+  - {fileID: 1403958210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &581675829
@@ -580,10 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 0.0047193225
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 82704104
+  m_SpriteHash: 925396098
 --- !u!114 &1031883001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,7 +648,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9179724391908118380, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+  m_Sprite: {fileID: -5951720345725339241, guid: 369bf4007d99750408e76296aff28ddd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -703,10 +704,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 9.9180626e-24
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 708402163
+  m_SpriteHash: 1006015559
 --- !u!114 &1171145989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,7 +771,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6831686772911556565, guid: b7f7bd1900b12b0438bd9f0daafe320b, type: 3}
+  m_Sprite: {fileID: -4698600402995417950, guid: bbdb0048d3824594287df9f7aee23853, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -829,7 +830,7 @@ MonoBehaviour:
   m_CategoryHash: 1.2470063e-19
   m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 882603289
+  m_SpriteHash: 194125447
 --- !u!114 &1218488376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,7 +894,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+  m_Sprite: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -949,10 +950,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 9.723703e-31
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 987444598
+  m_SpriteHash: 684957356
 --- !u!114 &1346300513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1017,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -702129208802778307, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+  m_Sprite: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1026,6 +1027,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1403958209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403958210}
+  m_Layer: 0
+  m_Name: SlashFXPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403958210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403958209}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1367562, y: 1.3610997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 450174359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478157462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,10 +1104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 1.2160058e-36
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 425583143
+  m_SpriteHash: 517632880
 --- !u!114 &1478157465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,7 +1171,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4548992743620234918, guid: a24b88a48fb7a1b4f97f085d4c71302f, type: 3}
+  m_Sprite: {fileID: -4698600402995417950, guid: bbdb0048d3824594287df9f7aee23853, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1195,10 +1227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 9.723703e-31
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 987444598
+  m_SpriteHash: 684957356
 --- !u!114 &1653911337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,8 +1294,8 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -702129208802778307, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
-  m_Color: {r: 0.82641506, g: 0.82641506, b: 0.82641506, a: 1}
+  m_Sprite: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
+  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1382,6 +1414,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2089380341}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089380342}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
 --- !u!4 &1799406150 stripped
 Transform:
@@ -1464,10 +1499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 2.9092094e-34
+  m_labelHash: 3.4217813e-11
   m_SpriteKey: 0
-  m_SpriteHash: 931323573
+  m_SpriteHash: 1003324863
 --- !u!114 &1877722984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,7 +1566,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7714791545361183550, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+  m_Sprite: {fileID: -1620421676278199692, guid: 3db45ba0670c2534196a84b0fc873357, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1568,6 +1603,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2089380342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089380340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5652c9fb8eaaab44e9933ee866d48a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  slashVFXPrefab: {fileID: 4230618951320628067, guid: 600d6f6cc15eaf04abea1101179a3b74, type: 3}
+  spawnPoint: {fileID: 1403958210}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
