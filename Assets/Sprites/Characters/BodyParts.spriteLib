@@ -19,9 +19,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Template
       m_Hash: 773225941
-      m_Sprite: {fileID: 8534288205215708609, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_Sprite: {fileID: 7714791545361183550, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 8534288205215708609, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_SpriteOverride: {fileID: 7714791545361183550, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
     - m_Name: Mario
       m_Hash: 463268762
       m_Sprite: {fileID: -1620421676278199692, guid: 3db45ba0670c2534196a84b0fc873357, type: 3}
@@ -35,33 +35,48 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Template
       m_Hash: 773225941
-      m_Sprite: {fileID: -6929174191448383699, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_Sprite: {fileID: -9179724391908118380, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -6929174191448383699, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_SpriteOverride: {fileID: -9179724391908118380, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+    - m_Name: Mario
+      m_Hash: 463268762
+      m_Sprite: {fileID: -5951720345725339241, guid: 369bf4007d99750408e76296aff28ddd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5951720345725339241, guid: 369bf4007d99750408e76296aff28ddd, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 2
   - m_Name: Arm
     m_Hash: 538130548
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Template
       m_Hash: 773225941
-      m_Sprite: {fileID: -1893701463642634389, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_Sprite: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -1893701463642634389, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_SpriteOverride: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+    - m_Name: Mario
+      m_Hash: 463268762
+      m_Sprite: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 2
   - m_Name: Leg
     m_Hash: 228443823
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Template
       m_Hash: 773225941
-      m_Sprite: {fileID: 9104402831850756944, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_Sprite: {fileID: -702129208802778307, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 9104402831850756944, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+      m_SpriteOverride: {fileID: -702129208802778307, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
+    - m_Name: Mario
+      m_Hash: 463268762
+      m_Sprite: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 2
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -111,5 +126,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639153193611944515
+  m_ModificationHash: 639153443366798778
   m_Version: 1
