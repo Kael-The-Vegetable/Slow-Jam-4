@@ -9,7 +9,7 @@ public enum Direction
     Right = 2
 }
 [Serializable]
-public struct Entrance
+public class Entrance
 {
     [field: SerializeField] public int x { get; set; }
     [field: SerializeField] public int y { get; set; }
@@ -29,6 +29,18 @@ public struct Entrance
         this.y = y;
         Direction = direction;
         InUse = false;
+	}
+
+    public Vector2Int DirToVector2()
+    {
+        return Direction switch
+        {
+            Direction.Up => Vector2Int.up,
+            Direction.Down => Vector2Int.down,
+            Direction.Left => Vector2Int.left,
+            Direction.Right => Vector2Int.right,
+            _ => Vector2Int.zero
+        };
 	}
 
     public static Entrance operator +(Entrance a, Entrance b) => new(a.x + b.x, a.y + b.y);
@@ -72,7 +84,7 @@ public struct Entrance
         return new Entrance(vector.x, vector.y);
     }
 
-	public override readonly bool Equals(object obj)
+	public override bool Equals(object obj)
 	{
 		return obj is Entrance entrance &&
 			   x == entrance.x &&
@@ -80,7 +92,7 @@ public struct Entrance
                Direction == entrance.Direction &&
 			   InUse == entrance.InUse;
 	}
-	public override readonly int GetHashCode()
+	public override int GetHashCode()
 	{
 		return HashCode.Combine(x, y, Direction, InUse);
 	}

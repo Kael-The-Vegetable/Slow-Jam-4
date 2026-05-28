@@ -36,7 +36,7 @@ public class FloorGenerator : MonoBehaviour
 		Queue<Entrance> entrancesToExpand = new();
 		foreach (Entrance entrance in startingPoint.GetFreeEntrances()) entrancesToExpand.Enqueue(entrance);
 		int count = 0;
-		while (entrancesToExpand.Count > 0 && count < 100)
+		while (entrancesToExpand.Count > 0 && count < 1000)
 		{
 			count++;
 			Entrance entrance = entrancesToExpand.Dequeue();
@@ -44,13 +44,13 @@ public class FloorGenerator : MonoBehaviour
 			Room room = _library.GetRoomForSpace(vArea, entrance, Room.RoomType.Normal);
 
 			if (room == null) continue;
-			Debug.Log("Placing room " + room.name + " at entrance (" + entrance.x + ", " + entrance.y + ") with valid area " + vArea);
 			if (!PlaceRoom(room, entrance, vArea)) continue;
 
 			Entrance[] newEntrances = room.GetFreeEntrances();
 			for (int i = 0; i < newEntrances.Length; i++) entrancesToExpand.Enqueue(newEntrances[i]);
 		}
-		if (count >= 100) Debug.LogError("Reached maximum number of iterations while generating " + name);
+		
+		if (count >= 1000) Debug.LogError("Reached maximum number of iterations while generating " + name);
 	}
 	private RectInt GetValidArea(Entrance entrance)
 	{
@@ -61,13 +61,14 @@ public class FloorGenerator : MonoBehaviour
 		bool canPlace = false;
 		int entranceIndex;
 		for (entranceIndex = 0; !canPlace && entranceIndex < room.Entrances.Length; entranceIndex++)
-		{ canPlace = validArea.Enveloping(new RectInt(entrance + room.Area.position - room.Entrances[entranceIndex], room.Area.size)); }
+		{ canPlace = validArea.Enveloping(new RectInt(entrance + room.Entrances[entranceIndex].DirToVector2() + room.Area.position - room.Entrances[entranceIndex], room.Area.size)); }
 		if (!canPlace) return false;
 
-		Vector2Int origin = entrance - room.Entrances[--entranceIndex];
+		Vector2Int origin = entrance - room.Entrances[--entranceIndex] + room.Entrances[entranceIndex].DirToVector2();
+
 		Room newRoom = Instantiate(room,
-			_grid.CellToWorld((Vector3Int)origin)
-				+ (Vector3)(room.Area.size * (Vector2)_grid.cellSize * 0.5f),
+			(Vector2)_grid.CellToWorld((Vector3Int)origin)
+				+ (room.Area.size * (Vector2)_grid.cellSize * 0.5f),
 			Quaternion.identity, transform);
 
 		_rooms.Add(newRoom);
@@ -84,7 +85,6 @@ public class FloorGenerator : MonoBehaviour
 		Rect worldSize = new( _grid.CellToWorld((Vector3Int)_floorSize.position), _grid.CellToWorld((Vector3Int)_floorSize.size) );
 		Gizmos.DrawCube(worldSize.center, worldSize.size);
 
-		Gizmos.color = Color.red;
-		Gizmos.DrawSphere(_grid.CellToWorld(_entranceToFloor) + _grid.cellSize * 0.5f, 0.5f);
+		GizmosExtras.DrawEntrance(transform.position, Vector2.one / 2, _grid.cellSize, _entranceToFloor, Color.red);
 	}
 }

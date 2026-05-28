@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public static class Extensions
 {
@@ -8,80 +11,99 @@ public static class Extensions
 	{
 		return s.xMin >= b.xMin && s.xMax <= b.xMax && s.yMin >= b.yMin && s.yMax <= b.yMax;
 	}
-	public static RectInt LargestFixedPointArea(this RectInt area, Vector2Int entrance, RectInt[] blockers)
+
+	// TODO: needs work
+	public static RectInt LargestFixedPointArea(this RectInt bounds, Vector2Int point, RectInt[] blockers)
 	{
-		var candidateX = new SortedSet<int>() { area.xMin, area.xMax };
-		var candidateY = new SortedSet<int>() { area.yMin, area.yMax };
+		bool[,] blocked = BuildGrid(bounds, blockers);
+		int px = point.x - bounds.xMin;
+		int py = point.y - bounds.yMin;
 
-		for (int i = 0; i < blockers.Length; i++)
-		{
-			RectInt a = blockers[i];
+		// Cast rays from the required point in each direction
+		int clearLeft = CastRay(blocked, px, py, -1, 0, bounds.width, bounds.height);
+		int clearRight = CastRay(blocked, px, py, 1, 0, bounds.width, bounds.height);
+		int clearDown = CastRay(blocked, px, py, 0, -1, bounds.width, bounds.height);
+		int clearUp = CastRay(blocked, px, py, 0, 1, bounds.width, bounds.height);
 
-			if (a.xMin > area.xMin) candidateX.Add(a.xMin);
-			if (a.xMax < area.xMax) candidateX.Add(a.xMax);
-			if (a.yMin > area.yMin) candidateY.Add(a.yMin);
-			if (a.yMax < area.yMax) candidateY.Add(a.yMax);
-		}
-		List<int> xs = new(candidateX);
-		List<int> ys = new(candidateY);
-		RectInt cur = new RectInt(entrance, Vector2Int.zero);
-		int bestArea = 0;
+		RectInt best = new RectInt(point.x, point.y, 1, 1);
+		int bestArea = 1;
+		
+		for (int l = 0; l <= clearLeft; l++)
+			for (int r = 0; r <= clearRight; r++)
+				for (int d = 0; d <= clearDown; d++)
+					for (int u = 0; u <= clearUp; u++)
+					{
+						int xMin = px - l;
+						int xMax = px + r;
+						int yMin = py - d;
+						int yMax = py + u;
 
-		for (int li = 0; li < xs.Count - 1; li++)
-		{ // li = left index
-			int lX = xs[li];
-			if (lX > entrance.x) break; // no area past this works
+						// Verify the full rectangle is clear (rays alone don't guarantee corners are clear)
+						if (!IsRectClear(blocked, xMin, yMin, xMax, yMax))
+							continue;
 
-			int[] rightBound = new int[ys.Count - 1]; // gaps
-			Array.Fill(rightBound, area.xMax);
-
-			// sweep right
-			for (int ri = li + 1; ri < xs.Count; ri++)
-			{ // ri = right index
-				int rX = xs[ri];
-
-				for (int ai = 0; ai < blockers.Length; ai++)
-				{
-					RectInt a = blockers[ai];
-					if (a.xMin >= rX || a.xMax <= lX) continue; // no intersection
-					for (int bi = 0; bi < ys.Count - 1; bi++)
-					{ // bi = bottom index
-						int bY = ys[bi];
-						int tY = ys[bi + 1];
-						if (a.yMin >= tY || a.yMax <= bY) continue; // no intersection
-						rightBound[bi] = Math.Min(rightBound[bi], a.xMin > lX ? a.xMin : lX);
+						int area = (xMax - xMin + 1) * (yMax - yMin + 1);
+						if (area > bestArea)
+						{
+							bestArea = area;
+							best = new RectInt(
+								bounds.xMin + xMin,
+								bounds.yMin + yMin,
+								xMax - xMin + 1,
+								yMax - yMin + 1
+							);
+						}
 					}
-				}
 
-				if (entrance.x < lX || entrance.x >= rX) continue; // no intersection with entrance
+		return best;
+	}
+	private static int CastRay(bool[,] blocked, int px, int py, int dx, int dy, int W, int H)
+	{
+		// Ensure starting position is itself in bounds
+		if (px < 0 || px >= W || py < 0 || py >= H) return 0;
 
-				int pointRowBand = -1;
-				for (int i = 0; i < ys.Count - 1; i++)
-				{
-					int bY = ys[i];
-					int tY = ys[i + 1];
-					if (entrance.y < bY || entrance.y >= tY) continue; // no intersection with entrance
-					pointRowBand = i;
-					break;
-				}
-
-				if (pointRowBand == -1) continue; // no intersection with entrance
-				if (rightBound[pointRowBand] < rX) continue; // point's row is blocked
-
-				int b = pointRowBand, t = pointRowBand;
-				while (b > 0 && rightBound[b - 1] >= rX) b--;
-				while (t < ys.Count - 2 && rightBound[t + 1] >= rX) t++;
-
-				int y1 = ys[b];
-				int y2 = ys[t + 1];
-				int curArea = (rX - lX) * (y2 - y1);
-				if (curArea > bestArea)
-				{
-					bestArea = curArea;
-					cur = new RectInt(lX, y1, rX - lX, y2 - y1);
-				}
-			}
+		int steps = 0;
+		int x = px + dx;
+		int y = py + dy;
+		while (x >= 0 && x < W && y >= 0 && y < H && !blocked[x, y])
+		{
+			steps++;
+			x += dx;
+			y += dy;
 		}
-		return cur;
+		return steps;
+	}
+	private static bool[,] BuildGrid(RectInt bounds, IList<RectInt> blockers)
+	{
+		int W = bounds.width, H = bounds.height;
+		bool[,] grid = new bool[W, H];
+		foreach (var b in blockers)
+		{
+			int x0 = Mathf.Clamp(b.xMin - bounds.xMin, 0, W);
+			int x1 = Mathf.Clamp(b.xMax - bounds.xMin, 0, W);
+			int y0 = Mathf.Clamp(b.yMin - bounds.yMin, 0, H);
+			int y1 = Mathf.Clamp(b.yMax - bounds.yMin, 0, H);
+			for (int x = x0; x < x1; x++)
+				for (int y = y0; y < y1; y++)
+					grid[x, y] = true;
+		}
+		return grid;
+	}
+	private static bool IsRectClear(bool[,] blocked, int xMin, int yMin, int xMax, int yMax)
+	{
+		int W = blocked.GetLength(0);
+		int H = blocked.GetLength(1);
+
+		// Clamp to grid bounds before iterating
+		xMin = Mathf.Clamp(xMin, 0, W - 1);
+		xMax = Mathf.Clamp(xMax, 0, W - 1);
+		yMin = Mathf.Clamp(yMin, 0, H - 1);
+		yMax = Mathf.Clamp(yMax, 0, H - 1);
+
+		for (int x = xMin; x <= xMax; x++)
+			for (int y = yMin; y <= yMax; y++)
+				if (blocked[x, y]) return false;
+
+		return true;
 	}
 }
