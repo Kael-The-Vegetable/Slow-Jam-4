@@ -14,10 +14,11 @@ public class FloorConstructionLibrary : ScriptableObject
 		List<Room> validCandidates = new List<Room>();
 		for (int i = 0; i < candidates.Length; i++)
 		{
-			for (int j = 0; j < candidates[i].Entrances.Length; j++)
+			Entrance[] entrances = candidates[i].GetEntrancesForDirection(entrance.Direction);
+			for (int j = 0; j < entrances.Length; j++)
 			{
 				if (area.Enveloping(new RectInt(
-					entrance + candidates[i].Area.position - candidates[i].Entrances[j],
+					entrance + candidates[i].Area.position - entrances[j],
 					candidates[i].Area.size)))
 				{
 					validCandidates.Add(candidates[i]);
