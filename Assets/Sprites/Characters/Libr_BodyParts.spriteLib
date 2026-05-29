@@ -27,8 +27,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -1620421676278199692, guid: 3db45ba0670c2534196a84b0fc873357, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -1620421676278199692, guid: 3db45ba0670c2534196a84b0fc873357, type: 3}
+    - m_Name: Test
+      m_Hash: 944623922
+      m_Sprite: {fileID: -4441292958832952779, guid: c9136fd987ad32243a498ec980558ae1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4441292958832952779, guid: c9136fd987ad32243a498ec980558ae1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Body
     m_Hash: 999990412
     m_CategoryList: []
@@ -43,8 +48,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -5951720345725339241, guid: 369bf4007d99750408e76296aff28ddd, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -5951720345725339241, guid: 369bf4007d99750408e76296aff28ddd, type: 3}
+    - m_Name: Test
+      m_Hash: 944623922
+      m_Sprite: {fileID: 4827249047351401736, guid: c210c4468661dbd48b659f1b00fbc19b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4827249047351401736, guid: c210c4468661dbd48b659f1b00fbc19b, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Arm
     m_Hash: 538130548
     m_CategoryList: []
@@ -59,8 +69,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
+    - m_Name: New Label
+      m_Hash: 259326342
+      m_Sprite: {fileID: -8563584770902544760, guid: 55075542a39a06d44a989fec634de42c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8563584770902544760, guid: 55075542a39a06d44a989fec634de42c, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Leg
     m_Hash: 228443823
     m_CategoryList: []
@@ -75,8 +90,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -3033165187410196380, guid: 3cb1a99022f0e5148a80aae0ea4a65a3, type: 3}
+    - m_Name: Test
+      m_Hash: 944623922
+      m_Sprite: {fileID: -8577926009728347139, guid: bc59a204eca15f94f8fd55def03737b6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8577926009728347139, guid: bc59a204eca15f94f8fd55def03737b6, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -91,8 +111,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 5154384196524603654, guid: 1446b0fe8a83a9a46bd2412eb3e2017f, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 5154384196524603654, guid: 1446b0fe8a83a9a46bd2412eb3e2017f, type: 3}
+    - m_Name: Test
+      m_Hash: 944623922
+      m_Sprite: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Shield
     m_Hash: 423614430
     m_CategoryList: []
@@ -107,8 +132,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 6831686772911556565, guid: b7f7bd1900b12b0438bd9f0daafe320b, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 6831686772911556565, guid: b7f7bd1900b12b0438bd9f0daafe320b, type: 3}
+    - m_Name: Test
+      m_Hash: 944623922
+      m_Sprite: {fileID: -5036656101933508571, guid: 381fa3082628af543964cffe95e52f69, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5036656101933508571, guid: 381fa3082628af543964cffe95e52f69, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Headgear
     m_Hash: 63890566
     m_CategoryList: []
@@ -126,5 +156,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639153443366798778
+  m_ModificationHash: 639156476436877250
   m_Version: 1
