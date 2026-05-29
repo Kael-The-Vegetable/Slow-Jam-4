@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Armour : Equipment
 {
-	[field: SerializeField] public float Defense { get; private set; }
+	[field: Header("Armour Properties")]
+	[field: SerializeField] public float Defense { get; protected set; }
 
 	public override void Randomize(Dictionary<ItemData.RandomizedProperty, ItemData.Randomization> randomizations)
 	{

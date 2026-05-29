@@ -8,7 +8,7 @@ public interface IEquipable
 	public int CurrentDurability { get; set; }
 }
 
-[Flags]
+
 public enum EquipSlot
 {
 	Head	= 1 << 0,
@@ -16,8 +16,7 @@ public enum EquipSlot
 	Legs	= 1 << 2,
 	Feet	= 1 << 3,
 	Hands	= 1 << 4,
-	Weapon	= 1 << 5,
-	Shield	= 1 << 6
+	Weapon	= 1 << 5
 }
 
 public interface IJunk

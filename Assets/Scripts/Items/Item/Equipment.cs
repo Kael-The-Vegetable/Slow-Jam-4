@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : Item, IEquipable
+public abstract class Equipment : Item, IEquipable
 {
-	[field: SerializeField] public EquipSlot Slot { get; private set; }
-	public Junk[] JunkImprovements { get; private set; } = new Junk[0];
-	[field: SerializeField] public int MaxDurability { get; private set; }
+	[field: Header("Equipment Properties")]
+	[field: SerializeField] public EquipSlot Slot { get; protected set; }
+	public Junk[] JunkImprovements { get; protected set; } = new Junk[0];
+	[field: SerializeField] public int MaxDurability { get; protected set; }
 	private int _durability;
 	public int CurrentDurability
 	{

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Junk : Item, IJunk, IStackable
 {
+	[field: Header("Junk Properties")]
 	[field: SerializeField] public Improvement[] Improvements { get; private set; }
 	[field: SerializeField] public int MaxSize { get; private set; }
 	public int CurrentSize { get; private set; } = 0;
