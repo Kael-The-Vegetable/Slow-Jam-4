@@ -24,7 +24,7 @@ public class PlayerCon : MonoBehaviour
     
     // Properties of the object used to check for groundedness
     public Transform GroundCheckTransform;
-    public float GroundCheckRadius;
+    public float GroundCheckRadius = 0.3f;
     public LayerMask LevelLayer;
     public LayerMask InteractableLayer;
 
@@ -146,13 +146,17 @@ public class PlayerCon : MonoBehaviour
         // Applies movement to player
         m_rigidbody.linearVelocityX = m_moveVec.x * WalkSpeed;
 
-        // For animator
-        m_animator.SetBool("IsWalking", m_moveVec.x != 0);
-
         // Flip player sprites based on movement direction
         if (m_moveVec.x != 0)
         {
             transform.localScale = new Vector3(Mathf.Sign(m_moveVec.x), 1, 1);
+        }
+
+        // Update animator
+        if (m_animator != null)
+        {
+            // Walking
+            m_animator.SetBool("IsWalking", m_moveVec.x != 0);
         }
     }
 
