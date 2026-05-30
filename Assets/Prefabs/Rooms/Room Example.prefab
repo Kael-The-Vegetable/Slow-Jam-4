@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 837614890343528300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -147,16 +147,16 @@ MonoBehaviour:
   <Entrances>k__BackingField:
   - <x>k__BackingField: -1
     <y>k__BackingField: 0
-    <Direction>k__BackingField: 2
+    <Direction>k__BackingField: -2
   - <x>k__BackingField: 3
     <y>k__BackingField: 0
-    <Direction>k__BackingField: 3
+    <Direction>k__BackingField: 2
   - <x>k__BackingField: 2
     <y>k__BackingField: 1
-    <Direction>k__BackingField: 0
+    <Direction>k__BackingField: 1
   - <x>k__BackingField: 0
     <y>k__BackingField: -1
-    <Direction>k__BackingField: 1
+    <Direction>k__BackingField: -1
   <Type>k__BackingField: 1
 --- !u!1 &5850850822413850540
 GameObject:

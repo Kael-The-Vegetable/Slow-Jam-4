@@ -18,7 +18,7 @@ public class FloorConstructionLibrary : ScriptableObject
 			for (int j = 0; j < entrances.Length; j++)
 			{
 				if (area.Enveloping(new RectInt(
-					entrance + candidates[i].Area.position - entrances[j],
+					entrance + entrances[j].DirToVector2() + candidates[i].Area.position - entrances[j],
 					candidates[i].Area.size)))
 				{
 					validCandidates.Add(candidates[i]);
