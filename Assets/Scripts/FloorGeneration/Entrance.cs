@@ -14,21 +14,22 @@ public class Entrance
     [field: SerializeField] public int x { get; set; }
     [field: SerializeField] public int y { get; set; }
     [field: SerializeField] public Direction Direction { get; set; }
-	public bool InUse { get; set; }
+	public Entrance ConnectedTo { get; set; }
+    public Room BaseRoom { get; set; }
 
-    public Entrance(int x, int y)
+	public Entrance(int x, int y)
     {
         this.x = x;
         this.y = y;
         Direction = default;
-        InUse = false;
+        ConnectedTo = null;
 	}
 	public Entrance(int x, int y, Direction direction)
     {
         this.x = x;
         this.y = y;
         Direction = direction;
-        InUse = false;
+        ConnectedTo = null;
 	}
 
     public Vector2Int DirToVector2()
@@ -54,46 +55,26 @@ public class Entrance
     public static Entrance operator *(int a, Entrance b) => new(a * b.x, a * b.y);
 	public static Entrance operator /(Entrance a, int b) => new(a.x / b, a.y / b);
 	public static Entrance operator /(int a, Entrance b) => new(a / b.x, a / b.y);
-	public static bool operator ==(Entrance a, Entrance b)
-    {
-		return a.x == b.x && a.y == b.y && a.InUse == b.InUse && a.Direction == b.Direction;
-	}
-    public static bool operator !=(Entrance a, Entrance b)
-    {
-        return !(a == b);
-	}
 
     public static implicit operator Vector3Int(Entrance entrance)
     {
-        return new Vector3Int(entrance.x, entrance.y, 0);
-    }
+        return (Vector3Int)(Vector2Int)entrance;
+	}
 	public static implicit operator Vector3(Entrance entrance)
     {
-        return new Vector3(entrance.x, entrance.y, 0);
+        return (Vector2)entrance;
 	}
 	public static implicit operator Vector2Int(Entrance entrance)
     {
-        return new Vector2Int(entrance.x, entrance.y);
-    }
+        var origin = entrance.BaseRoom != null ? entrance.BaseRoom.Area.position : Vector2Int.zero;
+		return origin + new Vector2Int(entrance.x, entrance.y);
+	}
     public static implicit operator Vector2(Entrance entrance)
     {
-        return new Vector2(entrance.x, entrance.y);
+        return (entrance.BaseRoom != null ? (Vector2)entrance.BaseRoom.Area.position : Vector2.zero) + new Vector2(entrance.x, entrance.y);
 	}
 	public static implicit operator Entrance(Vector2Int vector)
     {
         return new Entrance(vector.x, vector.y);
     }
-
-	public override bool Equals(object obj)
-	{
-		return obj is Entrance entrance &&
-			   x == entrance.x &&
-			   y == entrance.y &&
-               Direction == entrance.Direction &&
-			   InUse == entrance.InUse;
-	}
-	public override int GetHashCode()
-	{
-		return HashCode.Combine(x, y, Direction, InUse);
-	}
 }

@@ -15,6 +15,7 @@ public class Room : MonoBehaviour
 		var a = Area;
 		a.position = position;
 		Area = a;
+		for (int i = 0; i < Entrances.Length; i++) Entrances[i].BaseRoom = this;
 	}
 	public Entrance[] GetEntrancesForDirection(Direction direction)
 	{
@@ -22,7 +23,7 @@ public class Room : MonoBehaviour
 	}
 	public Entrance[] GetFreeEntrances()
 	{
-		return Array.FindAll(Entrances, e => !e.InUse);
+		return Array.FindAll(Entrances, e => e.ConnectedTo == null);
 	}
 	private void OnDrawGizmosSelected()
 	{

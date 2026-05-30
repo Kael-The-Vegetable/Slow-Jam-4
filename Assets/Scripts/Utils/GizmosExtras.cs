@@ -4,9 +4,9 @@ public static class GizmosExtras
 {
 	public static void DrawEntrance(Vector2 localSpace, Vector2 offset, Vector2 scale, Entrance entrance, Color color)
 	{
-		Vector2 pos = localSpace + (entrance + offset) * scale;
+		Vector2 pos = localSpace + (new Vector2(entrance.x, entrance.y) + offset) * scale;
 		Gizmos.color = color;
-		if (entrance.InUse)
+		if (entrance.ConnectedTo != null)
 			DrawX(pos, scale * 0.3f);
 		else
 			DrawArrow(pos, entrance.DirToVector2(), scale * 0.3f);
