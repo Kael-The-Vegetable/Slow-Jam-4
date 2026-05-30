@@ -38,6 +38,7 @@ public class PlayerCon : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_collider = GetComponent<Collider2D>();
+        m_animator = GetComponentInChildren<Animator>(); 
     }
 
     //------------------------------
@@ -144,6 +145,15 @@ public class PlayerCon : MonoBehaviour
 
         // Applies movement to player
         m_rigidbody.linearVelocityX = m_moveVec.x * WalkSpeed;
+
+        // For animator
+        m_animator.SetBool("IsWalking", m_moveVec.x != 0);
+
+        // Flip player sprites based on movement direction
+        if (m_moveVec.x != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(m_moveVec.x), 1, 1);
+        }
     }
 
     //------------------------------
