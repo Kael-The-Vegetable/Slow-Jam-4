@@ -3,16 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - SemiSolid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Level
   - Water
   - UI
-  - Level
-  - 
+  - Entities
+  - Interactable
   - 
   - 
   - 
@@ -40,15 +41,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Weapon
-    uniqueID: 1272617223
-    locked: 0
-  - name: Player
-    uniqueID: 3047025263
-    locked: 0
-  - name: Shield
-    uniqueID: 3883007723
     locked: 0
   m_RenderingLayers:
   - Default
