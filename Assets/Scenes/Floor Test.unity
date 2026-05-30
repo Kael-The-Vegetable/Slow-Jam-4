@@ -366,7 +366,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879644704}
   m_Enabled: 1
-  m_CellSize: {x: 4, y: 4, z: 0}
+  m_CellSize: {x: 2, y: 2, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -403,7 +403,10 @@ MonoBehaviour:
     y: 0
     width: 20
     height: 6
-  _entranceToFloor: {x: -1, y: 0}
+  _entranceToFloor:
+    <x>k__BackingField: 0
+    <y>k__BackingField: 0
+    <Direction>k__BackingField: 2
   _library: {fileID: 11400000, guid: ceb9e07a41dde9d40800f66b98c2c3d8, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

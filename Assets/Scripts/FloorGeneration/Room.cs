@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 public class Room : MonoBehaviour
 {
 	[field:SerializeField] public RectInt Area { get; private set; }
@@ -16,6 +16,14 @@ public class Room : MonoBehaviour
 		a.position = position;
 		Area = a;
 	}
+	public Entrance[] GetEntrancesForDirection(Direction direction)
+	{
+		return Array.FindAll(Entrances, e => (int)e.Direction + (int)direction == 0);
+	}
+	public Entrance[] GetFreeEntrances()
+	{
+		return Array.FindAll(Entrances, e => !e.InUse);
+	}
 	private void OnDrawGizmosSelected()
 	{
 		Gizmos.color = new Color(1f, 0, 0, 0.5f);
@@ -23,8 +31,7 @@ public class Room : MonoBehaviour
 		Gizmos.color = Color.blue;
 		for (int i = 0; i < Entrances.Length; i++)
 		{
-			Vector2 loc = Entrances[i] - (Area.size - Vector2.one) / 2f;
-			Gizmos.DrawSphere((Vector2)transform.position + loc * _personalScalar * transform.localScale, 0.2f);
+			GizmosExtras.DrawEntrance(transform.position, - (Area.size - Vector2.one) / 2f, _personalScalar * transform.localScale, Entrances[i], Color.blue);
 		}
 	}
 

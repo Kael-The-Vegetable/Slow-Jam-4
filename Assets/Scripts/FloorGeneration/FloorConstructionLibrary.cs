@@ -1,21 +1,37 @@
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "FloorConstructionLibrary", menuName = "Scriptable Objects/FloorConstructionLibrary")]
 public class FloorConstructionLibrary : ScriptableObject
 {
 	[field: SerializeField] public Room[] RoomTemplates { get; private set; } = new Room[0];
 
-	public Room GetRoomForSpace(RectInt area, Room.RoomType type)
+	public Room GetRoomForSpace(RectInt area, Entrance entrance, Room.RoomType type)
 	{
 		Room[] candidates = FilterRooms(area, type);
-		return candidates.Length > 0 ? candidates[Random.Range(0, candidates.Length)] : null;
+		List<Room> validCandidates = new List<Room>();
+		for (int i = 0; i < candidates.Length; i++)
+		{
+			Entrance[] entrances = candidates[i].GetEntrancesForDirection(entrance.Direction);
+			for (int j = 0; j < entrances.Length; j++)
+			{
+				if (area.Enveloping(new RectInt(
+					entrance + entrances[j].DirToVector2() + candidates[i].Area.position - entrances[j],
+					candidates[i].Area.size)))
+				{
+					validCandidates.Add(candidates[i]);
+					break;
+				}
+			}
+		}
+
+		return validCandidates.Count > 0 ? validCandidates[Random.Range(0, validCandidates.Count)] : null;
 	}
-	public Room GetStarterRoom()
+	public Room GetStarterRoom(RectInt floor, Entrance floorStart)
 	{
-		Room[] candidates = Array.FindAll(RoomTemplates, r => r.Type == Room.RoomType.Starting);
-		return candidates.Length > 0 ? candidates[Random.Range(0, candidates.Length)] : null;
+		return GetRoomForSpace(floor, floorStart, Room.RoomType.Starting);
 	}
 	public Room[] FilterRooms(RectInt area, Room.RoomType type = Room.RoomType.Normal)
 	{
