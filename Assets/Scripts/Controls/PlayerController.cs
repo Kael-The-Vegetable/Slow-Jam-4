@@ -31,6 +31,7 @@ public class PlayerCon : MonoBehaviour
     void Start()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
+        m_animator = GetComponentInChildren<Animator>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -72,6 +73,15 @@ public class PlayerCon : MonoBehaviour
 
         // Applies movement to player
         m_rigidbody.linearVelocityX = m_moveMag.x * WalkSpeed;
+
+        // Flips player sprites
+        if (m_moveMag.x != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(m_moveMag.x), 1, 1);
+        }
+
+        // For animator
+        m_animator.SetBool("IsWalking", m_moveMag.x != 0);
     }
 
     void OnDrawGizmosSelected()
