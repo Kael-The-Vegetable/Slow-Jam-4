@@ -32,7 +32,7 @@ public class PlayerCon : MonoBehaviour
     private bool m_grounded;
     private bool m_jumping;
     private bool m_canInteract;
-    public bool m_animating;
+    private bool m_animating;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -69,7 +69,7 @@ public class PlayerCon : MonoBehaviour
                 {
                     // Clip through it
                     StartCoroutine(ClipThrough(m_floor.GetComponent<Collider2D>()));
-                    Debug.Log($"Droped through {m_floor.name}");
+                    //Debug.Log($"Droped through {m_floor.name}");
                 }
             }
             else
@@ -102,8 +102,23 @@ public class PlayerCon : MonoBehaviour
         }
     }
 
+    public void OnHurt(Collision2D collision)
+    {
+        m_animator.SetTrigger("Hurt");
+        m_rigidbody.linearVelocity = (m_collider.transform.position - collision.collider.transform.position).normalized * JumpForce;
+        Debug.Log($"Hurt: {(m_collider.transform.position - collision.collider.transform.position).normalized}");
+        StartCoroutine(Hurt());
+    }
+
     //------------------------------
     // Core Routines
+    private IEnumerator Hurt()
+    {
+        m_animator.SetBool("IsActing", true);
+        yield return new WaitForSeconds(0.333f);
+        m_animator.SetBool("IsActing", false);
+    }
+    
     private IEnumerator Jump()
     {
         m_animator.SetBool("IsActing", true);
@@ -155,7 +170,7 @@ public class PlayerCon : MonoBehaviour
             m_canInteract = Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, InteractableLayer);
 
             // If player is falling near the ground...
-            if (!(m_jumping))
+            if (!(m_jumping) && !(m_animating))
             {
                 // Snaps player to the ground
                 m_pull.y -= Physics2D.Raycast(GroundCheckTransform.position, Vector2.down, GroundCheckRadius, LevelLayer).distance;
