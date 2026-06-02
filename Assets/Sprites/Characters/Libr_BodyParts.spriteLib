@@ -32,8 +32,23 @@ MonoBehaviour:
       m_Sprite: {fileID: -4441292958832952779, guid: c9136fd987ad32243a498ec980558ae1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -4441292958832952779, guid: c9136fd987ad32243a498ec980558ae1, type: 3}
+    - m_Name: Demon
+      m_Hash: 801730017
+      m_Sprite: {fileID: 6897479667268090689, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6897479667268090689, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+    - m_Name: MC
+      m_Hash: 735785885
+      m_Sprite: {fileID: 3964938229115945500, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3964938229115945500, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+    - m_Name: Orc
+      m_Hash: 221591673
+      m_Sprite: {fileID: 3799508404887519019, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3799508404887519019, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 6
   - m_Name: Body
     m_Hash: 999990412
     m_CategoryList: []
@@ -53,8 +68,23 @@ MonoBehaviour:
       m_Sprite: {fileID: 4827249047351401736, guid: c210c4468661dbd48b659f1b00fbc19b, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 4827249047351401736, guid: c210c4468661dbd48b659f1b00fbc19b, type: 3}
+    - m_Name: Demon
+      m_Hash: 801730017
+      m_Sprite: {fileID: -1940908528617272751, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1940908528617272751, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+    - m_Name: MC
+      m_Hash: 735785885
+      m_Sprite: {fileID: -8012559364367046107, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8012559364367046107, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+    - m_Name: Orc
+      m_Hash: 221591673
+      m_Sprite: {fileID: -4848521796537363852, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4848521796537363852, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 6
   - m_Name: Arm
     m_Hash: 538130548
     m_CategoryList: []
@@ -69,13 +99,28 @@ MonoBehaviour:
       m_Sprite: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -3574931185581633049, guid: 3ef64761979ef8b41aa6a08daaa8a42e, type: 3}
-    - m_Name: New Label
-      m_Hash: 259326342
+    - m_Name: Test
+      m_Hash: 944623922
       m_Sprite: {fileID: -8563584770902544760, guid: 55075542a39a06d44a989fec634de42c, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -8563584770902544760, guid: 55075542a39a06d44a989fec634de42c, type: 3}
+    - m_Name: Demon
+      m_Hash: 801730017
+      m_Sprite: {fileID: -4852002737857526351, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4852002737857526351, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+    - m_Name: MC
+      m_Hash: 735785885
+      m_Sprite: {fileID: -5648664258655176163, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5648664258655176163, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+    - m_Name: Orc
+      m_Hash: 221591673
+      m_Sprite: {fileID: -9003958548615516068, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9003958548615516068, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 6
   - m_Name: Leg
     m_Hash: 228443823
     m_CategoryList: []
@@ -95,8 +140,23 @@ MonoBehaviour:
       m_Sprite: {fileID: -8577926009728347139, guid: bc59a204eca15f94f8fd55def03737b6, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -8577926009728347139, guid: bc59a204eca15f94f8fd55def03737b6, type: 3}
+    - m_Name: Demon
+      m_Hash: 801730017
+      m_Sprite: {fileID: 8954813872578069252, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8954813872578069252, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+    - m_Name: MC
+      m_Hash: 735785885
+      m_Sprite: {fileID: 4378007210101491810, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4378007210101491810, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
+    - m_Name: Orc
+      m_Hash: 221591673
+      m_Sprite: {fileID: 2090174075836721236, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2090174075836721236, guid: 48f6b35de56492542b85e50958202fcc, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 6
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -156,5 +216,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639156476436877250
+  m_ModificationHash: 639160093894521306
   m_Version: 1

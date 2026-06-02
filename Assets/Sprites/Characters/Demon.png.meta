@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 230
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,12 +131,12 @@ TextureImporter:
       name: Demon_0
       rect:
         serializedVersion: 2
-        x: 176
-        y: 636
-        width: 320
-        height: 279
+        x: 0
+        y: 622
+        width: 319
+        height: 278
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Demon_1
       rect:
         serializedVersion: 2
-        x: 230
-        y: 275
-        width: 379
-        height: 438
+        x: 63
+        y: 355
+        width: 136
+        height: 214
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: Demon_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 315
-        width: 130
-        height: 237
+        x: 272
+        y: 0
+        width: 517
+        height: 583
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Demon_3
       rect:
         serializedVersion: 2
-        x: 684
-        y: 171
-        width: 132
-        height: 240
+        x: 66
+        y: 43
+        width: 131
+        height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,55 +215,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Demon_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 138
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa7e6e986c7740a20800000000000000
-      internalID: 3027676544100657071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Demon_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 138
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa0bd582f2d87c550800000000000000
-      internalID: 6181064247269503151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2239e05c8aa8cda479fdc88bee6e5f79
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +227,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Demon_0: 6897479667268090689
       Demon_1: 8954813872578069252
       Demon_2: -1940908528617272751
       Demon_3: -4852002737857526351
-      Demon_4: 3027676544100657071
-      Demon_5: 6181064247269503151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
