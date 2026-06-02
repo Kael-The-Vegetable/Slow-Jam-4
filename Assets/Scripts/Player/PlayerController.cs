@@ -32,6 +32,7 @@ public class PlayerCon : MonoBehaviour
     private bool m_grounded;
     private bool m_jumping;
     private bool m_canInteract;
+    public bool m_animating;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,10 +55,10 @@ public class PlayerCon : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {   
         // Ignoring negative edge, If player is grounded...
-        if(context.started && m_grounded)
+        if (context.started && m_grounded && !(m_animating))
         {
             // If down is being held...
-            if(m_moveVec.y < 0)
+            if (m_moveVec.y < 0)
             {
                 // Don't Jump!
                 // Get object that player is standing on
@@ -93,17 +94,38 @@ public class PlayerCon : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        
+        if (context.started && !(m_animating))
+        {
+            m_animator.SetTrigger("Attacking");
+            StartCoroutine(Attack());
+            //m_animator.SetTrigger("Attacking");
+        }
     }
 
     //------------------------------
     // Core Routines
+    private IEnumerator Jump()
+    {
+        m_animator.SetBool("IsActing", true);
+        yield return new WaitForSeconds(0.25f);
+        m_animator.SetBool("IsActing", false);
+    }
+    
     private IEnumerator ClipThrough(Collider2D collider)
     {
+        m_animator.SetBool("IsActing", true);
         Physics2D.IgnoreCollision(m_collider, collider);
         m_rigidbody.linearVelocityY = 0-(JumpForce/2);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Physics2D.IgnoreCollision(m_collider, collider, false);
+        m_animator.SetBool("IsActing", false);
+    }
+
+    private IEnumerator Attack()
+    {
+        m_animator.SetBool("IsActing", true);
+        yield return new WaitForSeconds(0.5f);
+        m_animator.SetBool("IsActing", false);
     }
 
     //------------------------------
@@ -115,16 +137,19 @@ public class PlayerCon : MonoBehaviour
         m_pull = Vector2.zero;
         // Checks if player is grounded
         m_grounded = Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, LevelLayer);
+        // Checks if player is in an un-interupible animation
+        //m_animating = m_animator.GetNextAnimatorStateInfo(0).IsTag("Act");
+        m_animating = m_animator.GetBool("IsActing");
 
         // While player is falling...
-        if((m_rigidbody.linearVelocityY <= 0))
+        if ((m_rigidbody.linearVelocityY <= 0))
         {
             // Sets jumping bool to false
             m_jumping = false;
         }
         
         // While player is grounded...
-        if(m_grounded)
+        if (m_grounded)
         {
             // Checks if player is at an interactable
             m_canInteract = Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, InteractableLayer);
@@ -144,8 +169,8 @@ public class PlayerCon : MonoBehaviour
         }
 
         // Applies movement to player
-        m_rigidbody.linearVelocityX = m_moveVec.x * WalkSpeed;
-
+            m_rigidbody.linearVelocityX = m_moveVec.x * WalkSpeed;
+        
         // Flip player sprites based on movement direction
         if (m_moveVec.x != 0)
         {
@@ -156,7 +181,12 @@ public class PlayerCon : MonoBehaviour
         if (m_animator != null)
         {
             // Walking
-            m_animator.SetBool("IsWalking", m_moveVec.x != 0);
+            m_animator.SetBool("IsWalking", (m_moveVec.x != 0) && m_grounded);
+            // Jumping
+            m_animator.SetBool("IsJumping", m_jumping);
+            // Falling
+            m_animator.SetBool("IsFalling", (!(m_jumping) && !(m_grounded)));
+            
         }
     }
 

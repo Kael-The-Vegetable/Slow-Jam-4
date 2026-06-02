@@ -8,6 +8,7 @@ public class FloorGenerator : MonoBehaviour
 	[SerializeField] private Entrance _entranceToFloor;
 	[SerializeField] private FloorConstructionLibrary _library;
 	private List<Room> _rooms = new();
+	private List<RectInt> _occupiedAreas = new();
 	private void Awake()
 	{
 		if (_grid == null) _grid = GetComponent<Grid>();
@@ -41,12 +42,14 @@ public class FloorGenerator : MonoBehaviour
 			count++;
 			Entrance entrance = entrancesToExpand.Dequeue();
 			RectInt vArea = GetValidArea(entrance);
+			
 			Room room = _library.GetRoomForSpace(vArea, entrance, Room.RoomType.Normal);
+			Debug.Log(room);
 
 			if (room == null) continue;
 			if (!PlaceRoom(room, entrance, vArea)) continue;
 
-			Entrance[] newEntrances = room.GetFreeEntrances();
+			Entrance[] newEntrances = _rooms[^1].GetFreeEntrances();
 			for (int i = 0; i < newEntrances.Length; i++) entrancesToExpand.Enqueue(newEntrances[i]);
 		}
 		
@@ -54,7 +57,7 @@ public class FloorGenerator : MonoBehaviour
 	}
 	private RectInt GetValidArea(Entrance entrance)
 	{
-		return _floorSize.LargestFixedPointArea(entrance, _rooms.ConvertAll(r => r.Area).ToArray());
+		return _floorSize.LargestFixedPointArea(entrance, _occupiedAreas.ToArray());
 	}
 	private bool PlaceRoom(Room room, Entrance entrance, RectInt validArea)
 	{
@@ -71,10 +74,13 @@ public class FloorGenerator : MonoBehaviour
 				+ (room.Area.size * (Vector2)_grid.cellSize * 0.5f),
 			Quaternion.identity, transform);
 
-		_rooms.Add(newRoom);
+
 		newRoom.Initialize(_grid.cellSize, origin);
-		entrance.InUse = true;
-		newRoom.Entrances[entranceIndex].InUse = true;
+		_rooms.Add(newRoom);
+		_occupiedAreas.Add(newRoom.Area);
+
+		entrance.ConnectedTo = newRoom.Entrances[entranceIndex];
+		newRoom.Entrances[entranceIndex].ConnectedTo = entrance;
 		return true;
 	}
 	private void OnDrawGizmos()
