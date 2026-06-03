@@ -23,11 +23,12 @@ public class PlayerCon : MonoBehaviour
     public float WalkSpeed = 5;
     public float JumpForce = 5;
     
-    // Properties of the object used to check for groundedness
+    // Properties of objects used to check for groundedness or attack
     public Transform GroundCheckTransform;
     public float GroundCheckRadius = 0.3f;
     public Transform AttackTransform;
     public float AttackRadius;
+    public GameObject slashFX;
 
     public LayerMask LevelLayer;
     public LayerMask InteractableLayer;
@@ -39,9 +40,6 @@ public class PlayerCon : MonoBehaviour
     private bool m_canInteract;
     private bool m_animating;
     private bool m_hitting;
-
-    // VFX
-    public GameObject slashFX;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
