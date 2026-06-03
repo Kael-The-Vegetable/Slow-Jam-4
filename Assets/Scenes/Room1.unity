@@ -220,8 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 374925990}
-  m_Layer: 0
-  m_Name: Lump
+  m_Layer: 6
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,8 +686,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeashedEnemy
   Home: {fileID: 295347997}
-  WalkSpeed: 1
-  LeashMax: 10
+  WalkSpeed: 3
+  LeashMax: 5
+  MaxHP: 3
 --- !u!1001 &1433586368
 PrefabInstance:
   m_ObjectHideFlags: 0

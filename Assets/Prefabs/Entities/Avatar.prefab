@@ -209,12 +209,17 @@ MonoBehaviour:
   JumpForce: 8
   GroundCheckTransform: {fileID: 7119238998512260626}
   GroundCheckRadius: 0.3
+  AttackTransform: {fileID: 680963968298346216}
+  AttackRadius: 1.4
   LevelLayer:
     serializedVersion: 2
     m_Bits: 8
   InteractableLayer:
     serializedVersion: 2
     m_Bits: 128
+  EntityLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &1298636578215288344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +401,10 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3123672496744461515, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3245537042639163707, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9999965
@@ -465,6 +474,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+--- !u!4 &680963968298346216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3123672496744461515, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+  m_PrefabInstance: {fileID: 2461998446351946275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1217056234459837685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3659487751481861846, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
