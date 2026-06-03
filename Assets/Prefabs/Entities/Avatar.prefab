@@ -220,6 +220,7 @@ MonoBehaviour:
   EntityLayer:
     serializedVersion: 2
     m_Bits: 64
+  slashFX: {fileID: 4230618951320628067, guid: 600d6f6cc15eaf04abea1101179a3b74, type: 3}
 --- !u!114 &1298636578215288344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +470,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char_Template
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4382178654476952784, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

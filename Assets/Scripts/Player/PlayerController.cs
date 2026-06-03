@@ -39,6 +39,9 @@ public class PlayerCon : MonoBehaviour
     private bool m_canInteract;
     private bool m_animating;
     private bool m_hitting;
+
+    // VFX
+    public GameObject slashFX;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -103,7 +106,12 @@ public class PlayerCon : MonoBehaviour
         if (context.started && !(m_animating))
         {
             m_animator.SetTrigger("Attacking");
-            StartCoroutine(Attack());
+            StartCoroutine(Attack());            
+
+            GameObject vfx = Instantiate(slashFX, AttackTransform.position, Quaternion.identity);
+            vfx.transform.localScale = new Vector3(transform.localScale.x, 1, 1);
+            
+            Destroy(vfx, 0.3f);
         }
     }
 

@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: fe311ba9d7679834cb6ae9fa2ed68c45
+guid: f1afed1b515900b498c26827494e54f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6897479667268090689
-    second: Demon_0
-  - first:
-      213: 8954813872578069252
-    second: Demon_1
-  - first:
-      213: -1940908528617272751
-    second: Demon_2
-  - first:
-      213: -4852002737857526351
-    second: Demon_3
-  - first:
-      213: 3027676544100657071
-    second: Demon_4
-  - first:
-      213: 6181064247269503151
-    second: Demon_5
+      213: 7284219647814240080
+    second: scimitar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 235
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,89 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Demon_0
+      name: scimitar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 622
-        width: 319
-        height: 278
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14b7ef48635c8bf50800000000000000
-      internalID: 6897479667268090689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Demon_1
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 355
-        width: 136
-        height: 214
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40381c0c5c3e54c70800000000000000
-      internalID: 8954813872578069252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Demon_2
-      rect:
-        serializedVersion: 2
-        x: 272
         y: 0
-        width: 517
-        height: 583
+        width: 425
+        height: 161
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15acd320af18015e0800000000000000
-      internalID: -1940908528617272751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Demon_3
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 43
-        width: 131
-        height: 238
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b587c887393aacb0800000000000000
-      internalID: -4852002737857526351
+      spriteID: 05783ed1d2fb61560800000000000000
+      internalID: 7284219647814240080
       vertices: []
       indices: 
       edges: []
@@ -219,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2239e05c8aa8cda479fdc88bee6e5f79
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -227,14 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Demon_0: 6897479667268090689
-      Demon_1: 8954813872578069252
-      Demon_2: -1940908528617272751
-      Demon_3: -4852002737857526351
+      scimitar_0: 7284219647814240080
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

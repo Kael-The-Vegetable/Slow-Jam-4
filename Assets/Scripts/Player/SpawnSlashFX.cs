@@ -5,12 +5,15 @@ public class VFXSpawner : MonoBehaviour
     [SerializeField] public GameObject slashVFXPrefab;
     [SerializeField] public Transform spawnPoint;
     
-    public void SpawnSlashVFX()
+    public void SpawnSlashVFX(float facingDirection)
     {
         if (slashVFXPrefab == null) return;
         
         // Spawn the vfx prefab
         GameObject vfx = Instantiate(slashVFXPrefab, spawnPoint.position, Quaternion.identity);
+        
+        // Flip the spawned VFX based on facing direction
+        vfx.transform.localScale = new Vector3(facingDirection, 1, 1);
         
         // Destroy prefab after animation is complete
         Animator vfxAnimator = vfx.GetComponent<Animator>();
