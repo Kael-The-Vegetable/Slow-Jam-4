@@ -145,7 +145,7 @@ MonoBehaviour:
   Home: {fileID: 8356069761547311138}
   WalkSpeed: 3
   LeashMax: 5
-  MaxHP: 5
+  MaxHP: 3
   Damage: 1
   AttackTransform: {fileID: 1479693405645184604}
   AttackRadius: 1.3
