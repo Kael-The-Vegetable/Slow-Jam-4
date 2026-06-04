@@ -59,6 +59,8 @@ public class PlayerStats : MonoBehaviour
         }
         if (m_health <= 0)
         {
+            // Play sound
+            SFXManager.Instance.PlaySound(SFXManager.Instance.playerDeath);
             Destroy(gameObject);
             DieScreen.SetActive(true);
         }
