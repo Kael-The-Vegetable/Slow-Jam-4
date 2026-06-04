@@ -1,26 +1,62 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
-public class PortalScript : MonoBehaviour
+public class Door : MonoBehaviour
 {
-    private Animator m_animator;
-
-    public Transform Destination;
+    private Animator animator;
+    private GameObject player;
+    private InputAction interactAction;
+    private bool playerInside = false;
+    private bool isTransitioning = false;
+    private float fadeDelay = 1.5f;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private string sceneToLoad = "NextScene";
+    [SerializeField] private Animator fadeAnimator;
+    
     void Start()
     {
-        
-    }
+        animator = GetComponent<Animator>();
 
-    // Called 60 times per second regardless of framerate
-    void FixedUpdate()
-    {
-        
+        interactAction = InputSystem.actions.FindAction("Interact");
     }
-
-    void OnDrawGizmosSelected()
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, Destination.position);
+        if (other.CompareTag("Player"))
+        {
+            playerInside = true;
+            player = other.gameObject;
+        }
+    }
+    
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInside = false;
+            player = null;
+        }
+    }
+    
+    void Update()
+    {
+        if (playerInside && interactAction.WasPressedThisFrame() && !isTransitioning)
+        {
+            isTransitioning = true;
+            
+            if (animator != null)
+                animator.SetTrigger("Open");
+            
+            if (fadeAnimator != null)
+                fadeAnimator.SetTrigger("Fade");
+            
+            Invoke(nameof(LoadScene), fadeDelay);
+        }
+    }
+    
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
