@@ -18,13 +18,33 @@ public class PlayerStats : MonoBehaviour
         m_invuln = 0;
     }
 
+    void OnHurt(float dir)
+    {
+        if (dir < 0)
+        {
+            m_health += dir;
+        }
+        else
+        {
+            m_health -= dir;
+        }
+    }
+
     void OnCollisionStay2D(Collision2D collision)
     {
         if ((collision.gameObject.tag == "Hazard") && m_invuln <= 0)
         {
             m_invuln = IFrames;
-            SendMessage("OnHurt", collision);
-            m_health -= 1 + Vulnerability;
+            float dir = transform.position.x - collision.transform.position.x;
+            if (dir >= 0)
+            {
+                dir = 1f;
+            }
+            else
+            {
+                dir = -1f;
+            }
+            SendMessage("OnHurt", dir);
         }
     }
 
