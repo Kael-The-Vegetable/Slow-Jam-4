@@ -62,6 +62,8 @@ public class LeashedEnemy : MonoBehaviour
 
         // Spawn slashFX
         GameObject vfx = Instantiate(slashFX, AttackTransform.position, Quaternion.identity);
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.enemySlash);
         // Flip it according to player facing direction
         vfx.transform.localScale = new Vector3(transform.localScale.x, 1, 1);
         // Despawn slashFX
@@ -87,6 +89,8 @@ public class LeashedEnemy : MonoBehaviour
     private IEnumerator Hurt(float t)
     {
         // Sets acting bool to false after t seconds
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.enemyHit);
         m_anim.SetTrigger("Hurting");
         yield return new WaitForSeconds(t);
         m_acting = false;
@@ -109,6 +113,8 @@ public class LeashedEnemy : MonoBehaviour
 
     private void Die()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.enemyDeath);
         // Tell the door that this enemy died
         OnEnemyDied?.Invoke();
         Destroy(gameObject);
