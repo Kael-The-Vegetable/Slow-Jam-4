@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
     public float MaxHealth;
     public float Vulnerability;
     public double IFrames;
+
+    public GameObject DieScreen;
     
     private float m_health;
     private double m_invuln;
@@ -57,7 +59,12 @@ public class PlayerStats : MonoBehaviour
         }
         if (m_health <= 0)
         {
-            //UnityEngine.SceneManager.LoadScene("");
+            Destroy(gameObject);
+            DieScreen.SetActive(true);
+        }
+        else
+        {
+            DieScreen.SetActive(false);
         }
     }
 }
