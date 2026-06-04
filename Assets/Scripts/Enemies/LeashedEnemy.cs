@@ -28,6 +28,9 @@ public class LeashedEnemy : MonoBehaviour
     private bool m_hitting;
     private float m_hp;
     
+    // Death event for door to listen to
+    public System.Action OnEnemyDied;
+    
     // ------------------------------
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -100,8 +103,15 @@ public class LeashedEnemy : MonoBehaviour
         m_hitting = false;
         // End lag
         yield return new WaitForSeconds(0.1f);
-        // Total seconds waited is durration of attack animation
+        // Total seconds waited is duration of attack animation
         m_acting = false;
+    }
+
+    private void Die()
+    {
+        // Tell the door that this enemy died
+        OnEnemyDied?.Invoke();
+        Destroy(gameObject);
     }
 
     // ------------------------------
@@ -110,7 +120,7 @@ public class LeashedEnemy : MonoBehaviour
     {
         if (m_hp <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
 
         // Checks x distance from Home point
