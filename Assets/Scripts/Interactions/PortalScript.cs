@@ -21,7 +21,7 @@ public class PortalScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         
-        // Find SpriteRenderer on the "DoorFront" child
+        // Find SpriteRenderer on the "DoorFront"
         Transform doorFront = transform.Find("DoorFront");
         if (doorFront != null)
         {
@@ -66,7 +66,6 @@ public class PortalScript : MonoBehaviour
     {
         isUnlocked = true;
         SetDoorGray(false);
-        Debug.Log("Door unlocked!");
     }
     
     void SetDoorGray(bool gray)
