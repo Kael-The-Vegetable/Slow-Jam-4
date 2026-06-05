@@ -409,8 +409,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6513,8 +6513,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESTART
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11805,6 +11805,63 @@ Transform:
   - {fileID: 1720992317}
   m_Father: {fileID: 1825827793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &992249188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3450892864212362275, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_Name
+      value: CanvasStuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1118.4298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 382.22702
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394268727328207973, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
 --- !u!1 &1002472429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3440166610293631390, guid: 43d3d83bbd4bd446396499fdc2ee4503, type: 3}
@@ -26892,8 +26949,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: YOU ARE DEAD
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42603,3 +42660,4 @@ SceneRoots:
   - {fileID: 1265069618}
   - {fileID: 389095236}
   - {fileID: 1722199057}
+  - {fileID: 992249188}
