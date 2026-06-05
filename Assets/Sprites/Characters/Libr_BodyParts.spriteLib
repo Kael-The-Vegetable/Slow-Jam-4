@@ -176,8 +176,18 @@ MonoBehaviour:
       m_Sprite: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
+    - m_Name: Spear
+      m_Hash: 509583783
+      m_Sprite: {fileID: 5018245360316724722, guid: f2931dd45e8471c4f85394a11e8a4683, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5018245360316724722, guid: f2931dd45e8471c4f85394a11e8a4683, type: 3}
+    - m_Name: Scimitar
+      m_Hash: 498573993
+      m_Sprite: {fileID: 7284219647814240080, guid: f1afed1b515900b498c26827494e54f1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7284219647814240080, guid: f1afed1b515900b498c26827494e54f1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 5
   - m_Name: Shield
     m_Hash: 423614430
     m_CategoryList: []
@@ -216,5 +226,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639160093894521306
+  m_ModificationHash: 639161986975010441
   m_Version: 1
