@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 using System.Collections;
 
 public class LeashedEnemy : MonoBehaviour
@@ -11,6 +12,7 @@ public class LeashedEnemy : MonoBehaviour
     
     // Parameters
     [Header("Stats")]
+    public string Name;
     public float MaxHP = 3f;
     public float WalkSpeed = 4f;
     public float Damage = 1f;
@@ -29,10 +31,13 @@ public class LeashedEnemy : MonoBehaviour
     // Variables
     private Vector2 m_moveVec;
     private float m_leash;
+    private float m_hp;
+    private SpriteResolver m_sr;
+
+    // Flags
     private bool m_wait;
     private bool m_acting;
     private bool m_hitting;
-    private float m_hp;
     private bool m_isDead = false;
     
     // Death event for door to listen to
@@ -140,6 +145,20 @@ public class LeashedEnemy : MonoBehaviour
         OnEnemyDied?.Invoke();
         // TODO: spawn pickup
         GameObject drop = Instantiate(Limb, transform.position, Quaternion.identity);
+        m_sr = drop.GetComponent<SpriteResolver>();
+
+        string l;
+        if (Random.Range(0,2) == 0)
+        {
+            l = "Arm";
+        }
+        else
+        {
+            l = "Leg";
+        }
+
+        Debug.Log($"Dropped {gameObject.ToString()} {l} ");
+        drop.SendMessage("OnDrop", new string[] {l, Name});
         
         Destroy(gameObject);
     }
@@ -245,6 +264,6 @@ public class LeashedEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackTransform.position, AttackRadius);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(AttackTransform.position, new Vector3 (2*LeashMax, 2, 1));
+        Gizmos.DrawWireCube(Home.position, new Vector3 (2*LeashMax, 2, 1));
     }
 }

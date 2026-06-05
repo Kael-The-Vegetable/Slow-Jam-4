@@ -7,21 +7,12 @@ public class ItemPickup : MonoBehaviour
     public Sprite itemSprite;
     public string Category = "Arm";
     public string Label = "Demon";
-    public string statToIncrease = "Health";
-    public float increaseAmount = 10f;
     
-    private SpriteRenderer spriteRenderer;
     private SpriteResolver m_sr;
     private string[] m_limb;
     
     void Start()
-    {
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        // if (spriteRenderer != null && itemSprite != null)
-        // {
-        //     spriteRenderer.sprite = itemSprite;
-        // }
-        
+    {   
         m_limb = new string[] {Category, Label};
 
         m_sr = GetComponent<SpriteResolver>();
@@ -29,6 +20,15 @@ public class ItemPickup : MonoBehaviour
         {
             m_sr.SetCategoryAndLabel(Category, Label);
         }
+    }
+
+    public void OnDrop(string[] limb)
+    {
+        Category = limb[0];
+        Label = limb[1];
+        Debug.Log($"{Category} {Label}");
+        m_limb = new string[] {Category, Label};
+        m_sr.SetCategoryAndLabel(Category, Label);
     }
     
     void OnTriggerEnter2D(Collider2D other)
