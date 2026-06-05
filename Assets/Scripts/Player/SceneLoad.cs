@@ -3,28 +3,24 @@ using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
-    public GameObject PauseUI;
+    [SerializeField] public GameObject mainMenuCanvas;
+    [SerializeField] public GameObject tutorialPanel;
 
-    public void PauseGame()
+    public void ShowTutorial()
     {
-        PauseUI.SetActive(true);
-        Time.timeScale = 0.0f;
+        mainMenuCanvas.SetActive(false);
+        tutorialPanel.SetActive(true);
     }
 
-    public void ResumeGame()
+    public void HideTutorial()
     {
-        PauseUI.SetActive(false);
-        Time.timeScale = 1.0f;
+        tutorialPanel.SetActive(false);
+        mainMenuCanvas.SetActive(true);
     }
 
     public void LoadScene(string sceneName)
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 }
