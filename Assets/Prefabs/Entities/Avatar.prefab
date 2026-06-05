@@ -153,7 +153,6 @@ MonoBehaviour:
   AttackTransform: {fileID: 680963968298346216}
   AttackRadius: 1.4
   slashFX: {fileID: 4230618951320628067, guid: 600d6f6cc15eaf04abea1101179a3b74, type: 3}
-  deathParticles: {fileID: 8627050981157489276}
   LevelLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -333,6 +332,7 @@ MonoBehaviour:
   Vulnerability: 0
   IFrames: 50
   DieScreen: {fileID: 0}
+  deathParticles: {fileID: 5560804842605911256, guid: 97d86acbf60ce04469f8f9063c0b9d46, type: 3}
   m_health: 0
 --- !u!1001 &2461998446351946275
 PrefabInstance:
@@ -416,7 +416,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4382178654476952784, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8160472785835108440, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
@@ -428,10 +429,5 @@ Transform:
 --- !u!4 &1217056234459837685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3659487751481861846, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-  m_PrefabInstance: {fileID: 2461998446351946275}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &8627050981157489276 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6166474222140708959, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
   m_PrefabInstance: {fileID: 2461998446351946275}
   m_PrefabAsset: {fileID: 0}

@@ -9,6 +9,8 @@ public class PlayerStats : MonoBehaviour
     public double IFrames;
 
     public GameObject DieScreen;
+    public GameObject deathParticles;
+    
     private SpriteRenderer m_Rarm;
     private SpriteRenderer m_Larm;
     private SpriteRenderer m_Rleg;
@@ -17,12 +19,14 @@ public class PlayerStats : MonoBehaviour
     public float m_health;
     private double m_invuln;
     private float[] m_inventory = {0, 0, 0, 0};
+    private bool m_isDead = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         m_health = MaxHealth;
         m_invuln = 0;
+        m_isDead = false;
         // Get body parts
         m_Rarm = GameObject.Find("Char_Template/Tex_Template/RArm").GetComponent<SpriteRenderer>();
         m_Larm = GameObject.Find("Char_Template/Tex_Template/LArm").GetComponent<SpriteRenderer>();
@@ -132,14 +136,27 @@ public class PlayerStats : MonoBehaviour
         }
         
         // Disable die window UI element while alive
-        if (m_health <= 0)
+        if (m_health <= 0 && !m_isDead)
         {
+            m_isDead = true;
+            
+            // Spawn death particles
+            if (deathParticles != null)
+            {
+                GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
+                ParticleSystem ps = particles.GetComponent<ParticleSystem>();
+                if (ps != null)
+                    ps.Play();
+                Destroy(particles, 1f);
+            }
+            
             // Play sound
             SFXManager.Instance.PlaySound(SFXManager.Instance.playerDeath);
-            Destroy(gameObject);
+            
             DieScreen.SetActive(true);
+            Destroy(gameObject);
         }
-        else
+        else if (m_health > 0)
         {
             // Activate die window when dead
             DieScreen.SetActive(false);
