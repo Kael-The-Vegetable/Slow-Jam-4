@@ -6,7 +6,6 @@ public class SFXManager : MonoBehaviour
     private AudioSource source;
 
     [Header("SFX")]
-    public AudioClip playerJump;
     public AudioClip playerSlash;
     public AudioClip playerHit;
     public AudioClip playerDeath;

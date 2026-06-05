@@ -331,8 +331,6 @@ MonoBehaviour:
   MaxHealth: 10
   Vulnerability: 0
   IFrames: 50
-  DieScreen: {fileID: 0}
-  m_health: 0
 --- !u!1001 &2461998446351946275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,37 +339,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8957301168523845502}
     m_Modifications:
-    - target: {fileID: 276470125615222072, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 276470125615222072, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 846900468
-      objectReference: {fileID: 0}
     - target: {fileID: 1138054432012301812, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_UpdateMode
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290729096817058757, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5036656101933508571, guid: 381fa3082628af543964cffe95e52f69, type: 3}
-    - target: {fileID: 1929493172021523399, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 0.000049070637
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929493172021523399, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 471460484
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453277631500207455, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453277631500207455, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 865670364
       objectReference: {fileID: 0}
     - target: {fileID: 3123672496744461515, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396,42 +366,6 @@ PrefabInstance:
     - target: {fileID: 3245537042639163707, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.306
-      objectReference: {fileID: 0}
-    - target: {fileID: 3344746848844708745, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -8012559364367046107, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 3426366052755665166, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3426366052755665166, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 4026581
-      objectReference: {fileID: 0}
-    - target: {fileID: 3483805099964440359, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3483805099964440359, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 793054415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601262097858863927, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
-    - target: {fileID: 3602679838295488580, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 4378007210101491810, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 3607728563998947154, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3607728563998947154, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 865670364
       objectReference: {fileID: 0}
     - target: {fileID: 3659487751481861846, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,41 +407,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5042616595346665595, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 4378007210101491810, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 6137420428623315925, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 0.000049070637
-      objectReference: {fileID: 0}
-    - target: {fileID: 6137420428623315925, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 114210330
-      objectReference: {fileID: 0}
     - target: {fileID: 6208542937385805800, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_Name
       value: Char_Template
-      objectReference: {fileID: 0}
-    - target: {fileID: 6813305236586280281, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5648664258655176163, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 8274658540553601454, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5648664258655176163, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 8856750024940385845, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3964938229115945500, guid: 543edc259a57bf74bbe5e77c291e8ff2, type: 3}
-    - target: {fileID: 9002018957727586357, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_labelHash
-      value: 1.5575211e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9002018957727586357, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-      propertyPath: m_SpriteHash
-      value: 846900468
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4382178654476952784, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}

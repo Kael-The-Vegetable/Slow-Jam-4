@@ -88,8 +88,6 @@ public class PlayerCon : MonoBehaviour
             }
             else
             {
-                // Play sound
-                SFXManager.Instance.PlaySound(SFXManager.Instance.playerJump);
                 // Apply jumpforce to rigidbody and set jumping bool to true
                 m_jumping = true;
                 m_rigidbody.linearVelocityY = JumpForce;
@@ -116,6 +114,7 @@ public class PlayerCon : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        if (context.started && !(m_animating))
         {
             m_animator.SetTrigger("Attacking");
             StartCoroutine(Attack());            
