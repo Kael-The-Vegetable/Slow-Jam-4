@@ -18,6 +18,7 @@ public class LeashedEnemy : MonoBehaviour
     public Transform AttackTransform;
     public float AttackRadius = 1.3f;
     public GameObject slashFX;
+    public GameObject deathParticles;
     public LayerMask EntityLayer;
 
     // Variables
@@ -27,6 +28,7 @@ public class LeashedEnemy : MonoBehaviour
     private bool m_acting;
     private bool m_hitting;
     private float m_hp;
+    private bool m_isDead = false;
     
     // Death event for door to listen to
     public System.Action OnEnemyDied;
@@ -41,6 +43,7 @@ public class LeashedEnemy : MonoBehaviour
         m_wait = true;
         m_moveVec.x = 1;
         m_hp = MaxHP;
+        m_isDead = false;
     }
 
     // ------------------------------
@@ -48,6 +51,7 @@ public class LeashedEnemy : MonoBehaviour
 
     void OnHit(float dmg)
     {
+        if (m_isDead) return;
         m_hp -= dmg;
         // Knockback
         m_rb.linearVelocityY = 4f;
@@ -113,6 +117,18 @@ public class LeashedEnemy : MonoBehaviour
 
     private void Die()
     {
+        if (m_isDead) return;
+        m_isDead = true;
+        
+        if (deathParticles != null)
+        {
+            GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
+            ParticleSystem ps = particles.GetComponent<ParticleSystem>();
+            if (ps != null)
+                ps.Play();
+            Destroy(particles, 1f);
+        }
+        
         // Play sound
         SFXManager.Instance.PlaySound(SFXManager.Instance.enemyDeath);
         // Tell the door that this enemy died
@@ -125,7 +141,7 @@ public class LeashedEnemy : MonoBehaviour
     // Called 60 times per second regardless of framerate
     void FixedUpdate()
     {
-        if (m_hp <= 0)
+        if (m_hp <= 0 && !m_isDead)
         {
             Die();
         }

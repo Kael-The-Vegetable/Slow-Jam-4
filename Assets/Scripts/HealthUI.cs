@@ -1,15 +1,15 @@
 using UnityEngine;
 using TMPro;
 
-public class HealthUI : MonoBehaviour
+public class StatsUI : MonoBehaviour
 {
-    private TMP_Text hpIndicator;
+    private TMP_Text statsText;
     private GameObject player;
     private PlayerStats playerStats;
     
     void Start()
     {
-        hpIndicator = GetComponent<TMP_Text>();
+        statsText = GetComponent<TMP_Text>();
     }
     
     void Update()
@@ -21,9 +21,12 @@ public class HealthUI : MonoBehaviour
                 playerStats = player.GetComponent<PlayerStats>();
         }
         
-        if (playerStats != null && hpIndicator != null)
+        if (playerStats != null && statsText != null)
         {
-            hpIndicator.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}");
+            statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}");
         }
     }
 }
+
+// use this once the stats are available
+// statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}\nATK: {playerStats.attack}\nDEF: {playerStats.defense}\nSPD: {playerStats.speed}");

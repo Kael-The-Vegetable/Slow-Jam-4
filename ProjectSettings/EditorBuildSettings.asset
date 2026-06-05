@@ -5,19 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Floor Test.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: aa40b4ee030a9c34a9d0a6e242f8db0a
   - enabled: 1
     path: Assets/Scenes/PlayerTest.unity
     guid: 1ac1abbafabe84c15bfc0750cb2194d7
-  - enabled: 1
-    path: Assets/Scenes/Room1.unity
-    guid: 11cff211303fb4976bd43d35f620aaed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 010778b30419b4603aaa5cb18c901cdb
   - enabled: 1
@@ -27,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3.unity
     guid: 7ca3dbad96274dd4282370f2808caf5d
   - enabled: 1
-    path: Assets/Scenes/TestLevel.unity
-    guid: 0af02a3dc8a2ddb4dba1ee0073bcaed9
+    path: Assets/Scenes/Level4.unity
+    guid: 8cd04c0921c5c95448a29d3138bd3ee4
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 1548f4505c47ff74ebe6419820658770
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: fdeb19a824f72bf46b57fdd403c46846
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 554b2379bec584157b78b4b3d1a1cbe6, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

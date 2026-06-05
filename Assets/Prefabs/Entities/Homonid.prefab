@@ -150,6 +150,7 @@ MonoBehaviour:
   AttackTransform: {fileID: 1479693405645184604}
   AttackRadius: 1.3
   slashFX: {fileID: 4230618951320628067, guid: 600d6f6cc15eaf04abea1101179a3b74, type: 3}
+  deathParticles: {fileID: 5560804842605911256, guid: 97d86acbf60ce04469f8f9063c0b9d46, type: 3}
   EntityLayer:
     serializedVersion: 2
     m_Bits: 64

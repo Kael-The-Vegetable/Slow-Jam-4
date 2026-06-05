@@ -332,6 +332,7 @@ MonoBehaviour:
   Vulnerability: 0
   IFrames: 50
   DieScreen: {fileID: 0}
+  deathParticles: {fileID: 5560804842605911256, guid: 97d86acbf60ce04469f8f9063c0b9d46, type: 3}
   m_health: 0
 --- !u!1001 &2461998446351946275
 PrefabInstance:
@@ -511,7 +512,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4382178654476952784, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8160472785835108440, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
