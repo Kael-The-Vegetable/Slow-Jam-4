@@ -117,6 +117,7 @@ public class LeashedEnemy : MonoBehaviour
         SFXManager.Instance.PlaySound(SFXManager.Instance.enemyDeath);
         // Tell the door that this enemy died
         OnEnemyDied?.Invoke();
+        // TODO: spawn pickup
         Destroy(gameObject);
     }
 
