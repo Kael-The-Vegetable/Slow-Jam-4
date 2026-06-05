@@ -1170,6 +1170,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926680432004407122, guid: 69edcd5174213d944aead5290b2602d0, type: 3}
+      propertyPath: sceneToLoad
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926680432004407122, guid: 69edcd5174213d944aead5290b2602d0, type: 3}
       propertyPath: fadeAnimator
       value: 
       objectReference: {fileID: 765122337}

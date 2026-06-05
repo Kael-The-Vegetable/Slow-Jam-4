@@ -237,5 +237,7 @@ public class LeashedEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackTransform.position, AttackRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(AttackTransform.position, new Vector3 (2*LeashMax, 2, 1));
     }
 }
