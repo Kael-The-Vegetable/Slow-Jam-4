@@ -409,8 +409,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1168,6 +1168,10 @@ PrefabInstance:
     - target: {fileID: 4276214427681735921, guid: 69edcd5174213d944aead5290b2602d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926680432004407122, guid: 69edcd5174213d944aead5290b2602d0, type: 3}
+      propertyPath: sceneToLoad
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 6926680432004407122, guid: 69edcd5174213d944aead5290b2602d0, type: 3}
       propertyPath: fadeAnimator
@@ -6513,8 +6517,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESTART
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26892,8 +26896,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: YOU ARE DEAD
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
