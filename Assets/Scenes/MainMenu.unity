@@ -1989,14 +1989,14 @@ MonoBehaviour:
 
     CONTROLS:
 
-    WASD/ARROWS - WALK
+    WALK - WASD/ARROWS
 
-    LEFT CLICK - ATTACK
+    ATTACK - LEFT CLICK/ENTER
 
-    SPACEBAR
-    - JUMP
+    JUMP
+    - SPACEBAR
 
-    ESCAPE - PAUSE
+    PAUSE - ESC
 
 '
   m_isRightToLeft: 0
