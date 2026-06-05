@@ -1,11 +1,12 @@
 using UnityEngine;
 using TMPro;
 
-public class StatsUI : MonoBehaviour
+public class HealthUI : MonoBehaviour
 {
     private TMP_Text statsText;
     private GameObject player;
     private PlayerStats playerStats;
+    private PlayerCon playerCon;
     
     void Start()
     {
@@ -18,15 +19,16 @@ public class StatsUI : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
+            {
                 playerStats = player.GetComponent<PlayerStats>();
+                playerCon = player.GetComponent<PlayerCon>();
+            }
         }
         
-        if (playerStats != null && statsText != null)
+        if (playerStats != null && playerCon != null && statsText != null)
         {
-            statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}");
+            float displaySpeed = playerCon.WalkSpeed - 7f;
+            statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}\nATK: {playerCon.Atk}\nSPD: {displaySpeed}");
         }
     }
 }
-
-// use this once the stats are available
-// statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}\nATK: {playerStats.attack}\nDEF: {playerStats.defense}\nSPD: {playerStats.speed}");

@@ -273,7 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c79dd1c8fc3050468d8339ee5131de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIScript
-  PauseUI: {fileID: 0}
+  mainMenuCanvas: {fileID: 0}
+  tutorialPanel: {fileID: 0}
 --- !u!1 &2207057414397477145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1014,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HP:  HP / maxHP'
+  m_text: 'HP: ? / maxHP
+
+    ATK: ?
+
+    SPD: ?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
@@ -1048,7 +1053,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
