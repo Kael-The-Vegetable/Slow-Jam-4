@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dac6f1f3da0f6246b56669641d4e15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerJump: {fileID: 8300000, guid: 958b2ab7027a40f448422d9734c006ed, type: 3}
   playerSlash: {fileID: 8300000, guid: b64a36ae86bd1a84a8cc41ca95d07583, type: 3}
   playerHit: {fileID: 8300000, guid: fcc7c60b39a16494889382e56831c76c, type: 3}
   playerDeath: {fileID: 8300000, guid: 8628a9de50fb62c4ea2a9f2e82f54d47, type: 3}

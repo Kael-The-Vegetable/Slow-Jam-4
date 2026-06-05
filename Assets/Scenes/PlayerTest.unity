@@ -420,6 +420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2002963752247414015, guid: c9904737d4660b641950564cac92d66c, type: 3}
+      propertyPath: playerJump
+      value: 
+      objectReference: {fileID: 8300000, guid: 958b2ab7027a40f448422d9734c006ed, type: 3}
     - target: {fileID: 2646748375678571139, guid: c9904737d4660b641950564cac92d66c, type: 3}
       propertyPath: m_Name
       value: MusicManager
