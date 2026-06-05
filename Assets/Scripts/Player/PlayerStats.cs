@@ -134,6 +134,8 @@ public class PlayerStats : MonoBehaviour
         // Disable die window UI element while alive
         if (m_health <= 0)
         {
+            // Play sound
+            SFXManager.Instance.PlaySound(SFXManager.Instance.playerDeath);
             Destroy(gameObject);
             DieScreen.SetActive(true);
         }

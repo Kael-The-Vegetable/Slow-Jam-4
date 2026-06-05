@@ -147,6 +147,8 @@ public class PlayerCon : MonoBehaviour
     // Core Routines
     private IEnumerator Hurt()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.playerHit);
         m_animator.SetBool("IsActing", true);
         yield return new WaitForSeconds(0.333f);
         m_animator.SetBool("IsActing", false);
@@ -171,6 +173,8 @@ public class PlayerCon : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.playerSlash);
         m_animator.SetBool("IsActing", true);
         // Startup
         yield return new WaitForSeconds(0.1f);
