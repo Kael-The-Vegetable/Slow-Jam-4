@@ -366,8 +366,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: (special thanks to cody & kale)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -503,8 +503,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: AN ARM AND A LEG
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -640,8 +640,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: (audio by idoberg, joelfazhari, & voicebosch)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -777,8 +777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1043,8 +1043,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MADE BY SAM & NATHAN QUIST
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

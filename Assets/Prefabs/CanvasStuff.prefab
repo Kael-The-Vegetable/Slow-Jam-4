@@ -278,8 +278,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'HP:  HP / maxHP'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
-  m_sharedMaterial: {fileID: 1155042779627485325, guid: 4b3f6e82832185b4a80649c59e13707b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
+  m_sharedMaterial: {fileID: -5851665989297821966, guid: ef2fdb5ba33f63e418018093c43456c9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
