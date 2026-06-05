@@ -142,11 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9070f8968a5b046ab9009a3f11fd8ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeashedEnemy
-  Home: {fileID: 8356069761547311138}
-  WalkSpeed: 3
-  LeashMax: 5
   MaxHP: 3
+  WalkSpeed: 3
   Damage: 1
+  Home: {fileID: 8356069761547311138}
+  LeashMax: 5
   AttackTransform: {fileID: 1479693405645184604}
   AttackRadius: 1.3
   slashFX: {fileID: 4230618951320628067, guid: 600d6f6cc15eaf04abea1101179a3b74, type: 3}
@@ -154,6 +154,7 @@ MonoBehaviour:
   EntityLayer:
     serializedVersion: 2
     m_Bits: 64
+  Limb: {fileID: 8869091066360581696, guid: 8ef85ddb106c64f4d9080c7db7b27d81, type: 3}
 --- !u!1 &7330272940329768842
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +196,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4439275001866407553}
     m_Modifications:
+    - target: {fileID: 276470125615222072, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+      propertyPath: m_labelHash
+      value: 3.663976e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 276470125615222072, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+      propertyPath: m_SpriteHash
+      value: 882603289
+      objectReference: {fileID: 0}
     - target: {fileID: 1138054432012301812, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
       propertyPath: m_Controller
       value: 
@@ -275,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char_Template
       objectReference: {fileID: 0}
+    - target: {fileID: 8274658540553601454, guid: 7174b4be7a4848e478972b6d17ab26d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -4848,6 +4848,8 @@ GameObject:
   - component: {fileID: 5922133329139700137}
   - component: {fileID: 8770727941610666487}
   - component: {fileID: 6515682854927715125}
+  - component: {fileID: -1262258497363775854}
+  - component: {fileID: 8610777908113015497}
   m_Layer: 6
   m_Name: Collectible
   m_TagString: Untagged
@@ -4920,7 +4922,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4852002737857526351, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
+  m_Sprite: {fileID: 7314140024523681025, guid: 9fa1de100287fd746a1b7f500734a750, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4964,17 +4966,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03131354, y: -0.010438204}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.55744684, y: 1.012766}
+    oldSize: {x: 0.376, y: 0.8413333}
     newSize: {x: 0.55744684, y: 1.012766}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2045913, y: 1.931294}
+  m_Size: {x: 1, y: 1.7}
   m_EdgeRadius: 0
 --- !u!114 &6515682854927715125
 MonoBehaviour:
@@ -4991,3 +4993,33 @@ MonoBehaviour:
   itemSprite: {fileID: -4852002737857526351, guid: fe311ba9d7679834cb6ae9fa2ed68c45, type: 3}
   statToIncrease: Health
   increaseAmount: 10
+--- !u!114 &-1262258497363775854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869091066360581696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 3a46f1530dcbc3a4780b09fe847301de, type: 3}
+--- !u!114 &8610777908113015497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869091066360581696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 1.2470063e-19
+  m_labelHash: 3.4217813e-11
+  m_SpriteKey: 0
+  m_SpriteHash: 882603289

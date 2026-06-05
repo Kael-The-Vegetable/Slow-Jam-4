@@ -10,16 +10,21 @@ public class LeashedEnemy : MonoBehaviour
     private Collider2D m_target;
     
     // Parameters
-    public Transform Home;
-    public float WalkSpeed = 4f;
-    public float LeashMax = 5f;
+    [Header("Stats")]
     public float MaxHP = 3f;
+    public float WalkSpeed = 4f;
     public float Damage = 1f;
+    [Header("Pathing")]
+    public Transform Home;
+    public float LeashMax = 5f;
+    [Header("Attack data")]
     public Transform AttackTransform;
     public float AttackRadius = 1.3f;
     public GameObject slashFX;
+    [Header("Misc")]
     public GameObject deathParticles;
     public LayerMask EntityLayer;
+    public GameObject Limb;
 
     // Variables
     private Vector2 m_moveVec;
@@ -134,6 +139,8 @@ public class LeashedEnemy : MonoBehaviour
         // Tell the door that this enemy died
         OnEnemyDied?.Invoke();
         // TODO: spawn pickup
+        GameObject drop = Instantiate(Limb, transform.position, Quaternion.identity);
+        
         Destroy(gameObject);
     }
 
