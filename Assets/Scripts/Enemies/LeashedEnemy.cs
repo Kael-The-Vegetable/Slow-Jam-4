@@ -111,6 +111,7 @@ public class LeashedEnemy : MonoBehaviour
     {
         // Tell the door that this enemy died
         OnEnemyDied?.Invoke();
+        // TODO: spawn pickup
         Destroy(gameObject);
     }
 

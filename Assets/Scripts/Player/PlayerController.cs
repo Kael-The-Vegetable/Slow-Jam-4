@@ -21,8 +21,11 @@ public class PlayerCon : MonoBehaviour
     
     // Gameplay Variables
     public float WalkSpeed = 5;
+    private float m_baseSpeed;
     public float JumpForce = 5;
+    private float m_baseJump;
     public float Atk = 1;
+    private float m_baseAtk;
     
     // Properties of objects used to check for groundedness or attack
     public Transform GroundCheckTransform;
@@ -48,6 +51,9 @@ public class PlayerCon : MonoBehaviour
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_collider = GetComponent<Collider2D>();
         m_animator = GetComponentInChildren<Animator>();
+        m_baseAtk = Atk;
+        m_baseJump = JumpForce;
+        m_baseSpeed = WalkSpeed;
     }
 
     //------------------------------
@@ -88,10 +94,10 @@ public class PlayerCon : MonoBehaviour
             }
         }
 
+        // Cut jump short if jump is released while rising
         if (context.canceled && m_jumping)
         {
             m_rigidbody.linearVelocityY = m_rigidbody.linearVelocityY/2;
-            //m_rigidbody.linearVelocityY = -0.5f;
         }
     }
 
@@ -129,6 +135,12 @@ public class PlayerCon : MonoBehaviour
         m_rigidbody.linearVelocityY = 4f;
         m_rigidbody.linearVelocityX = 4f * dir;
         StartCoroutine(Hurt());
+    }
+
+    public void OnEquip(float[] inventory)
+    {
+        Atk = m_baseAtk + inventory[0] + inventory[1];
+        WalkSpeed = m_baseSpeed + inventory[2] + inventory[3];
     }
 
     //------------------------------
