@@ -64,6 +64,8 @@ public class PortalScript : MonoBehaviour
     
     void UnlockDoor()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.doorUnlock);
         isUnlocked = true;
         SetDoorGray(false);
     }
