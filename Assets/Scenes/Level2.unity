@@ -594,6 +594,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+--- !u!1 &2009202977157400571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7585999950603753842, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+  m_PrefabInstance: {fileID: 2009202977157400570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2163866831685981411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1783,7 +1788,7 @@ PrefabInstance:
     - target: {fileID: 2750858541164191024, guid: 43d3d83bbd4bd446396499fdc2ee4503, type: 3}
       propertyPath: DieScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2009202977157400571}
     - target: {fileID: 3729914855513502182, guid: 43d3d83bbd4bd446396499fdc2ee4503, type: 3}
       propertyPath: m_Sprite
       value: 
