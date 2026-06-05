@@ -21,7 +21,11 @@ public class PlayerCon : MonoBehaviour
     
     // Gameplay Variables
     public float WalkSpeed = 5;
+    private float m_baseSpeed;
     public float JumpForce = 5;
+    private float m_baseJump;
+    public float Atk = 1;
+    private float m_baseAtk;
     
     // Properties of objects used to check for groundedness or attack
     public Transform GroundCheckTransform;
@@ -46,7 +50,10 @@ public class PlayerCon : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_collider = GetComponent<Collider2D>();
-        m_animator = GetComponentInChildren<Animator>(); 
+        m_animator = GetComponentInChildren<Animator>();
+        m_baseAtk = Atk;
+        m_baseJump = JumpForce;
+        m_baseSpeed = WalkSpeed;
     }
 
     //------------------------------
@@ -86,6 +93,12 @@ public class PlayerCon : MonoBehaviour
                 m_rigidbody.linearVelocityY = JumpForce;
             }
         }
+
+        // Cut jump short if jump is released while rising
+        if (context.canceled && m_jumping)
+        {
+            m_rigidbody.linearVelocityY = m_rigidbody.linearVelocityY/2;
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -106,25 +119,36 @@ public class PlayerCon : MonoBehaviour
             m_animator.SetTrigger("Attacking");
             StartCoroutine(Attack());            
 
+            // Spawn slashFX
             GameObject vfx = Instantiate(slashFX, AttackTransform.position, Quaternion.identity);
+            // Flip it according to player facing direction
             vfx.transform.localScale = new Vector3(transform.localScale.x, 1, 1);
-            
+            // Despawn slashFX
             Destroy(vfx, 0.3f);
         }
     }
 
-    public void OnHurt(Collision2D collision)
+    public void OnHurt(float dir)
     {
         m_animator.SetTrigger("Hurt");
-        m_rigidbody.linearVelocity = (m_collider.transform.position - collision.collider.transform.position).normalized * JumpForce;
-        Debug.Log($"Hurt: {(m_collider.transform.position - collision.collider.transform.position).normalized}");
+        // Knocks Back
+        m_rigidbody.linearVelocityY = 4f;
+        m_rigidbody.linearVelocityX = 4f * dir;
         StartCoroutine(Hurt());
+    }
+
+    public void OnEquip(float[] inventory)
+    {
+        Atk = m_baseAtk + inventory[0] + inventory[1];
+        WalkSpeed = m_baseSpeed + inventory[2] + inventory[3];
     }
 
     //------------------------------
     // Core Routines
     private IEnumerator Hurt()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.playerHit);
         m_animator.SetBool("IsActing", true);
         yield return new WaitForSeconds(0.333f);
         m_animator.SetBool("IsActing", false);
@@ -149,12 +173,18 @@ public class PlayerCon : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        // Play sound
+        SFXManager.Instance.PlaySound(SFXManager.Instance.playerSlash);
         m_animator.SetBool("IsActing", true);
+        // Startup
         yield return new WaitForSeconds(0.1f);
         m_hitting = true;
+        // Hitbox is active
         yield return new WaitForSeconds(0.3f);
         m_hitting = false;
+        // End lag
         yield return new WaitForSeconds(0.1f);
+        // Total seconds waited is durration of attack animation
         m_animator.SetBool("IsActing", false);
     }
 
@@ -170,13 +200,18 @@ public class PlayerCon : MonoBehaviour
         // Checks if player is in an un-interupible animation
         m_animating = m_animator.GetBool("IsActing");
 
+        // While attack hitbox is active...
         if (m_hitting)
         {
+            // If an entity was hit...
             m_target = Physics2D.OverlapCircle(AttackTransform.position, AttackRadius, EntityLayer);
             if (m_target)
             {
-                m_target.gameObject.SendMessage("OnHurt", 1f);
+                // Tell the entity to do OnHit
+                m_target.gameObject.SendMessage("OnHit", Atk);
+                // Clear target variable
                 m_target = null;
+                // Disable hitbox so only one entity can be hit per hitbox
                 m_hitting = false;
             }
         }

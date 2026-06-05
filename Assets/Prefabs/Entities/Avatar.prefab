@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Mass: 2.1853983
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCon
   WalkSpeed: 8
-  JumpForce: 8
+  JumpForce: 12
+  Atk: 1
   GroundCheckTransform: {fileID: 7119238998512260626}
   GroundCheckRadius: 0.3
   AttackTransform: {fileID: 680963968298346216}
