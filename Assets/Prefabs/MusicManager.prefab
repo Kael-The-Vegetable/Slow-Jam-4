@@ -162,3 +162,4 @@ MonoBehaviour:
   enemyHit: {fileID: 8300000, guid: 4c874e5c6a16f9f42a6678cf2cd1ed3e, type: 3}
   enemyDeath: {fileID: 8300000, guid: e334c00f09ca37c41a0eb1ef78d62fbe, type: 3}
   upgrade: {fileID: 8300000, guid: 0bd5f673c048be2499afce24f9d0e69b, type: 3}
+  door: {fileID: 8300000, guid: 3afc39cb05756384b8af33888510cba9, type: 3}

@@ -13,6 +13,7 @@ public class SFXManager : MonoBehaviour
     public AudioClip enemyHit;
     public AudioClip enemyDeath;
     public AudioClip upgrade;
+    public AudioClip door;
     
     void Awake()
     {

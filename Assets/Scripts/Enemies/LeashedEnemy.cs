@@ -100,13 +100,13 @@ public class LeashedEnemy : MonoBehaviour
     {
         m_anim.SetTrigger("Attacking");
         // Startup
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         m_hitting = true;
         // Hitbox is active
         yield return new WaitForSeconds(0.3f);
         m_hitting = false;
         // End lag
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         // Total seconds waited is duration of attack animation
         m_acting = false;
     }

@@ -99,7 +99,9 @@ public class PortalScript : MonoBehaviour
         if (playerInside && interactAction.WasPressedThisFrame() && !isTransitioning && isUnlocked)
         {
             isTransitioning = true;
-            
+            // Play sound
+            SFXManager.Instance.PlaySound(SFXManager.Instance.door);
+
             if (animator != null)
                 animator.SetTrigger("Open");
             
