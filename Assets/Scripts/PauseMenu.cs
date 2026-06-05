@@ -31,7 +31,7 @@ public class SimplePause : MonoBehaviour
         isPaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         InputSystem.actions.FindActionMap("Player").Disable();
         

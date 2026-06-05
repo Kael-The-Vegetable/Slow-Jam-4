@@ -23,10 +23,10 @@ public class StatsUI : MonoBehaviour
         
         if (playerStats != null && statsText != null)
         {
-            statsText.SetText($"Health: {playerStats.m_health}/{playerStats.MaxHealth}");
+            statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}");
         }
     }
 }
 
 // use this once the stats are available
-// statsText.SetText($"Health: {playerStats.m_health}/{playerStats.MaxHealth}\nAttack: {playerStats.attack}\nDefense: {playerStats.defense}\nSpeed: {playerStats.speed}");
+// statsText.SetText($"HP: {playerStats.m_health}/{playerStats.MaxHealth}\nATK: {playerStats.attack}\nDEF: {playerStats.defense}\nSPD: {playerStats.speed}");
