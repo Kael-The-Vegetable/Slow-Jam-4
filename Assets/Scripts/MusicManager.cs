@@ -20,7 +20,9 @@ public class MusicManager : MonoBehaviour
     
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        string currentScene = SceneManager.GetActiveScene().name;
+        
+        if (currentScene == "MainMenu" || currentScene == "Victory")
         {
             Destroy(gameObject);
             Instance = null;
