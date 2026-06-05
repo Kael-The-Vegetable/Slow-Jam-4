@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject DieScreen;
     
-    private float m_health;
+    public float m_health;
     private double m_invuln;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
