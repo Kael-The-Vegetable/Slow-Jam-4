@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 1020960360025344416, guid: 338bdce13b9f94e55889a01b9b312313, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5055821712651445512, guid: 70b80aab612b39647b98ea3df3ce4537, type: 3}
+      objectReference: {fileID: 5018245360316724722, guid: f2931dd45e8471c4f85394a11e8a4683, type: 3}
     - target: {fileID: 1021794831584989907, guid: 338bdce13b9f94e55889a01b9b312313, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -343,8 +343,12 @@ PrefabInstance:
       value: Homonid
       objectReference: {fileID: 0}
     - target: {fileID: 7709337486856939842, guid: 338bdce13b9f94e55889a01b9b312313, type: 3}
+      propertyPath: m_labelHash
+      value: 0.000049070637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709337486856939842, guid: 338bdce13b9f94e55889a01b9b312313, type: 3}
       propertyPath: m_SpriteHash
-      value: 114210330
+      value: 735349306
       objectReference: {fileID: 0}
     - target: {fileID: 8803296843762293484, guid: 338bdce13b9f94e55889a01b9b312313, type: 3}
       propertyPath: m_Sprite
@@ -412,6 +416,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+--- !u!1 &2009202977157400571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4234476827461264887, guid: e4eff2612365fad46a30ecbb7b9d6eec, type: 3}
+  m_PrefabInstance: {fileID: 2009202977157400570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2163866831685981411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,6 +1047,10 @@ PrefabInstance:
       propertyPath: m_SpriteHash
       value: 846900468
       objectReference: {fileID: 0}
+    - target: {fileID: 2750858541164191024, guid: 43d3d83bbd4bd446396499fdc2ee4503, type: 3}
+      propertyPath: DieScreen
+      value: 
+      objectReference: {fileID: 2009202977157400571}
     - target: {fileID: 3729914855513502182, guid: 43d3d83bbd4bd446396499fdc2ee4503, type: 3}
       propertyPath: m_Sprite
       value: 
